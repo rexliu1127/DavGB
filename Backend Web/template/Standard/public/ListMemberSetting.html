@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{{lbl_SubAccount}}</title>
+<link href="{{SkinPublicPath}}css/table_w.css" rel="stylesheet" type="text/css" />
+<link href="{{SkinPublicPath}}css/jquery.fixhead.css" rel="stylesheet" type="text/css" />    
+<link href="{{SkinPublicPath}}css/bootstrap.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="../Script/Member.js?v=20120301"></script>
+
+<script language="JavaScript" type="text/javascript" src="../Script/jquery/jquery.fixhead.js?v=20120201"></script>
+
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="10"><img src="{{SkinPublicPath}}images/icon_title.gif" /></td>
+    <td><h1>{{lbl_MemberSetting}}</h1></td>
+  </tr>
+</table>
+<div class="boxgy">
+
+
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabstyle01">
+    <tr>
+      <th width="10" nowrap="nowrap">{{lbl_UserName}}</th>
+      <td><input id="txtUserName" type="text" value="{{inputUserName}}" /></td>
+    </tr>
+  </table>
+  <div id="Button" class="btnarea">
+    <div class="btnstyle" style="text-align:center;">
+      <a id="btnDoMemberSettingSearch" name="btnSubmit" onclick ="DoMemberSettingSearch();" class="btngy"><span>{{lbl_Submit}}</span></a>
+    </div>
+  </div>
+</div>
+
+
+<div>
+  <table  cellpadding="0" cellspacing="0" class="tabstyle02" id="tbSubAccountInfo">
+    <thead>
+      <tr>
+      <th width="100" nowrap="nowrap">{{lbl_UserName}}</th>
+      <th width="100" nowrap="nowrap">{{lbl_GameProivder}} {{lbl_SlotGame}}</th>
+      <th width="100" nowrap="nowrap" style="TABLE-LAYOUT:fixed;word-break:break-all">{{lbl_GameProivder}} {{lbl_LiveCasino}}</th>
+      <th width="100" nowrap="nowrap" style="TABLE-LAYOUT:fixed;word-break:break-all">{{lbl_GameProivder}} {{lbl_Keno}}</th>
+
+          
+
+    
+    </thead>
+    <tbody>
+    {{ListDataOutput}}
+    </tbody>
+    <!-- BEGIN  ListBlock -->
+    <tr class="{{IntervalColor}}">
+      <td width="100" align="left"><div>{{UserName}}</div></td>
+      <td width="100" align="center">  <a href="javascript:" onclick="OpenChangeMemberSetting('{{GStatus_1_1}}','{{ProviderID_1_1}}','{{GameType_1_1}}','{{ToCID}}','{{UserName}}');" > {{GStatus_1_1}}</a> </td>
+      <td width="100" align="center"> <a href="javascript:" onclick="OpenChangeMemberSetting('{{GStatus_2_2}}','{{ProviderID_2_2}}','{{GameType_2_2}}','{{ToCID}}','{{UserName}}');" > {{GStatus_2_2}}</a>  </td>
+      <td width="100" align="center"><a href="javascript:" onclick="OpenChangeMemberSetting('{{GStatus_3_3}}','{{ProviderID_3_3}}','{{GameType_3_3}}','{{ToCID}}','{{UserName}}');" > {{GStatus_3_3}}</a> </td>
+
+    </tr>
+    <!-- END ListBlock -->
+
+  </table>
+    <div class="div_wrapper">
+                <div class="div_center">
+                    <select name="select_pageLength" onchange="DoPagingMemberSettingSearch({ CurrentAgentName: '{{CurrentAgentName}}', CurrentAgentID: '{{CurrentAgentID}}', CurrentRoleID: '{{CurrentRoleID}}', PageLength: this.options[this.selectedIndex].value, PageIndex: '{{pageIndex}}' });">
+                        <option value="10" {{selected10}}>{{lbl_PageLength10}}</option>
+                        <option value="20" {{selected20}}>{{lbl_PageLength20}}</option>
+                        <option value="50" {{selected50}}>{{lbl_PageLength50}}</option>
+                    </select>
+                </div>
+                <div class="div_center">　{{rowscount}}　</div>
+                <div class="div_center2">
+                    <ul class="pagination">
+                        {{pagination}}
+                    </ul>
+                </div>
+    </div>
+</div>
+<div id="divPopup" class="popup2" style="display:none"><span class="spop_button b-close"><span>X</span></span>
+  <div class="content" style="height: auto; width: auto;">
+    <div class="b-ajax-wrapper" style=""></div>
+  </div>
+</div>
+</body>
+<script>
+    $(function () {
+        var table = new TableThing('tbSubAccountInfo');
+        table.fixThead();
+        $(window).resize(function () {
+            table.fixThead();
+        });
+    });
+</script>
+</html>

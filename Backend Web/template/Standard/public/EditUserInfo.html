@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<link href="{{SkinPublicPath}}css/table_w.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="Script/Users.js?v=20140506"></script>
+<script language="javascript" type="text/javascript">
+
+    </script>
+</head>
+<body>
+<form action="User/UpdUser.aspx" method="post" id="frmEdieUser" name="frmEdieUser" >
+  <div id="CustomerInfo">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td id="CustomerInfoContentTitle" class="titleOpen"><a href="javascript:ShowHideEditDiv('CustomerInfoContent');">{{lbl_EditAccount}}</a></td>
+      </tr>
+    </table>
+    <div id="CustomerInfoContent">
+      <table width= "100%" cellpadding="0" cellspacing="0" class="tabstyle02">
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_UserName}} </th>
+          <td width="40%"> {{UserName}}</td>
+          <th width="10%" nowrap="nowrap">{{lbl_FirstName}}</th>
+          <td width="40%">
+                <input type="text" id="txtFirstname" name="txtFirstname" value="{{Firstname}}" />
+          </td>
+        </tr>
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_LastName}}</th>
+          <td width="40%"><input type="text" id="txtLastname" name="txtLastname" value="{{Lastname}}" /></td>
+          <th width="10%" nowrap="nowrap">{{lbl_Phone}}</th>
+          <td width ="40%"><input type ="text" id="txtPhone" name="txtPhone"  value="{{Phone}}"/></td>
+        </tr>
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_EMail}}</th>
+          <td width="40%"><input type="text" id="txtEMail" name="txtEMail" value="{{EMail}}" /></td>
+          <th width="10%" nowrap="nowrap">{{lbl_Permissions}}</th>
+          <td width="40%" nowrap="nowrap">
+              {{lbl_Member}}<input type="checkbox" id="chkMember" name="chkMember" value="1" {{checkedMember}}/>
+              {{lbl_Bank}}<input type="checkbox" id="chkBank" name="chkBank" value="1"  {{checkedBank}}/>
+               {{lbl_TotalBets}}<input type="checkbox" id="chkTotalBets" name="chkTotalBets" value="1"  {{checkedTotalBets}}/>
+              {{lbl_Reports}}<input type="checkbox" id="chkReports" name="chkReports" value="1"  {{checkedReports}}/>
+               {{lbl_Setting}}<input type="checkbox" id="chkSetting" name="chkSetting" value="1" {{checkedSetting}} />
+          </td>
+        </tr>
+    
+      </table>
+    </div>
+  </div>
+
+  <br />
+  <div id="Button" class="btnarea">   
+      <a  onclick ="CloseBPopup();" class="btngy"><span>{{lbl_cancel}}</span></a>          
+      <a id="btnSubmit" name="btnSubmit" onclick ="DoEditUser();" class="btngy"><span>{{lbl_submit}}</span></a>  
+  </div>
+  <input type="hidden" id="RT" name="RT" value="upd" />
+  <input type="hidden" id="ToCID" name="ToCID" value="{{ToCID}}" />
+</form>
+
+
+<script>
+
+</script>
+
+</body>
+</html>

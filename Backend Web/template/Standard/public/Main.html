@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+<link href="{{SkinPublicPath}}css/jquery.bPopup.css?v=20091207" rel="stylesheet" type="text/css" />
+<link href="{{SkinPublicPath}}css/left.css?v=20091207" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="Script/jquery/jquery.js?v=[[Script/jquery/jquery.js]]"></script>
+
+<script type="text/javascript" src="Script/jquery/jquery.ui.control.js?v=[[Script/jquery/jquery.ui.control.js]]"></script>
+<script type="text/javascript" src="Script/jquery/jquery.bPopup.js?v=[[Script/jquery/jquery.bPopup.js]]"></script>
+
+<script language="JavaScript" type="text/javascript" src="Script/Common.js?v=20160201"></script>
+
+
+<script type="text/javascript">
+    var UserLang = '{{UserLang}}';
+    var UserName = '{{UserName}}';
+    var SkinPuplicPath = '{{SkinPublicPath}}';
+    var Res_UpdateSuccess = '{{lbl_UpdateSuccess}}';
+    //--------click-----------------------
+    var strMonth = new Array('{{Jan}}', '{{Feb}}', '{{Mar}}', '{{Apr}}', '{{May}}', '{{Jun}}', '{{Jul}}', '{{Aug}}', '{{Sept}}', '{{Oct}}', '{{Nov}}', '{{Dec}}');
+    var year = {{year}};
+    var month = {{month}};
+    var day = {{day}};
+    var hrs = {{hrs}};
+    var min = {{min}};
+    var sec = {{sec}};
+    var lbl_AM='{{AM}}';
+    var lbl_PM='{{PM}}';
+    var UserMgr={{UserMgr}};
+    var MemberMgr={{MemberMgr}};
+    var BankMgr={{BankMgr}};
+    var ReportMgr={{ReportMgr}};
+</script>
+</head>
+
+<body onload="Iinitialize();">
+    <div id="container">
+        <div id="header"></div>
+        <br class="clearfloat" />
+        <div id="mainContent">
+            <div id="left"></div>
+            <div id="content" class="Main_position"></div>
+            <div id="WaitingContent" align="center" style="display:none; margin:auto;"><img  src="{{SkinPublicPath}}images/ajax-loader.gif"/></div>
+        </div>
+    <br class="clearfloat" />
+    </div>
+</body>
+</html>

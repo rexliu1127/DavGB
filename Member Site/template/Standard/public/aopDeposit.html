@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>    
+    
+    <link href="{{SkinRootPath}}public/css/table_w.css" rel="stylesheet" type="text/css" />
+
+    
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="Script/Common.js"></script>
+    <title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>支付寶付款</title>
+	<meta charset="utf-8" />
+
+    <script type="text/javascript">
+        var lbl_TotalMustNumeric = '{{lbl_TotalMustNumeric}}';
+        var lbl_TotalMustGreaterThanZero = '{{lbl_TotalMustGreaterThanZero}}';
+        
+        function DoAopTransaction() {
+
+            if (isNaN(document.getElementById('total').value)) {
+                alert(lbl_TotalMustNumeric);
+                return;
+            }
+
+            if (document.getElementById('total').value <=0) {
+                alert(lbl_TotalMustGreaterThanZero);
+                return;
+            }
+
+            document.getElementById('frmDeposit').submit();
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <form id="frmDeposit" class="form-inline" method="post">
+
+        <div class="innertube2">
+<table width="100%" border="0" cellpadding="3">
+  <tr>
+    <th><h1><img src="{{SkinRootPath}}public/images/aoplogo2.png" /></h1></th>
+  </tr>
+  <tr>
+    <th>            <label for="exampleInputName2">{{lbl_amount}}</label>
+        <input type="text" name="total" class="form-control" id="total" onkeydown="return(validateOnKP(this, event,this.selectionStart));"><a href="javascript:DoAopTransaction();" class="myButton" style="margin-left: 10px;">{{lbl_submit}}</a></th>
+    </tr>
+</table>
+ 
+      </div>
+        
+        
+    </form>
+
+
+    <div>
+
+    </div>
+
+</body>
+</html>

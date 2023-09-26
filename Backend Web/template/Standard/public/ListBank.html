@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="{{SkinPublicPath}}css/table_w.css" rel="stylesheet" type="text/css" />
+<link href="{{SkinPublicPath}}css/jquery.fixhead.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="../Script/Bank.js?v=20120301"></script>
+</head>
+<body>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="10"><img src="{{SkinPublicPath}}images/icon_title.gif" /></td>
+    <td><h1>{{lbl_ListBank}}</h1></td>
+  </tr>
+</table>
+      <table  cellpadding="0" cellspacing="0" class="tabstyle02" id="tbSubAccountInfo">
+    <thead>
+      <tr>
+      <th width="26">*</th>
+      <th width="27" nowrap="nowrap">{{lbl_Edit}}</th>
+          <th width="100" nowrap="nowrap" style="TABLE-LAYOUT:fixed;word-break:break-all">{{lbl_Status}}</th>
+      <th nowrap="nowrap" width="50">{{lbl_BankCode}}</th>
+      <th width="100" nowrap="nowrap">{{lbl_BankName}}</th>
+      <th width="100" nowrap="nowrap">{{lbl_BankAccount}}</th>
+    
+    </thead>
+    <tbody>
+    {{BankDataOutput}}
+    </tbody>
+    <!-- BEGIN  BankBlock -->
+    <tr class="{{IntervalColor}}">
+      <td width="26" align="center"> {{Number}} </td>
+      
+      <td width="27" align="center"><a href="javascript:" onclick="OpenBankEdit('{{OpenEditUrl}}','{{CurrentAgentID}}','{{ToBankID}}');"><img src="{{SkinPublicPath}}images/layout/icon_edit.png"/></a></td>
+                <td width="50" align="center"> {{Status}}</a></td>
+              <td width="100" align="right"> {{BankCode}} </td>
+
+      <td width="100" align="right"><div>{{BankName}}</div></td>
+      <td width="100" align="right"> {{BankAccount}} </td>
+
+    </tr>
+    <!-- END BankBlock -->
+
+  </table>
+</div>
+<div id="divPopup" class="popup2" style="display:none"><span class="spop_button b-close"><span>X</span></span>
+  <div class="content" style="height: auto; width: auto;">
+    <div class="b-ajax-wrapper" style=""></div>
+  </div>
+</div>
+</body>
+</html>

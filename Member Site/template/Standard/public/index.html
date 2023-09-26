@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+
+html {
+    overflow-x:hidden;
+    }
+    </style>
+    
+    <link href="{{skinrootpath}}public/css/head_layout.css?v=20101216" rel="stylesheet" type="text/css" />
+    <link href="{{SkinRootPath}}public/css/jquery.selectbox.css?v=[[{{SkinRootPath}}public/css/jquery.selectbox.css]]" rel="stylesheet" type="text/css" />
+    <link href="{{skinrootpath}}public/css/button.css?v=20090801" rel="stylesheet" type="text/css" />
+    <link href="{{skinrootpath}}public/css/jquery.ui.all.css?v=20090801" rel="stylesheet" type="text/css" />
+    <link href="{{skinrootpath}}public/css/table_w.css?v=20090801" rel="stylesheet" type="text/css" />
+    <link href="{{skinrootpath}}public/css/global.css?v=20101115" rel="stylesheet" type="text/css" />
+    <link href="{{ImageServer}}{{skinrootpath}}public/css/tipTip.css?v=[[{{skinrootpath}}public/css/tipTip.css]]" rel="stylesheet" type="text/css" />
+    <link href="{{ImageServer}}{{skinrootpath}}public/css/jquery.bPopup.css?v=[[{{skinrootpath}}public/css/jquery.bPopup.css]]" rel="stylesheet" type="text/css" />
+
+    
+    <script type="text/javascript">
+    //--------Site Const---------------
+    var SiteMode = {{SiteMode}};
+    var Deposit_SiteMode = {{Deposit_SiteMode}};  //Deposit use only
+    var IsLicensee =false;
+    var DomainName = "{{DomainName}}";
+    var IsLogin = {{IsLogin}};
+    var UserLang = "{{UserLang}}";
+    var SkinRootPath = "{{SkinRootPath}}";
+    var ImageServer = "{{ImageServer}}";
+    var DisplayMode = '3';
+    var SiteId = "{{SiteId}}";
+    var UserName = "";
+    var imgServerURL = "{{ImageServer}}";
+    var ChkSrc="";
+    var IsEuro =false;
+    //--------Odds Display---------------
+    var hash_TmplLoaded = new Array(); // hashtable for keeping template loaded flag (value: true / false)
+    var REFRESH_INTERVAL_L = 20000;
+    var REFRESH_INTERVAL_D = 60000;
+    var REFRESH_COUNTDOWN = 600; 
+
+    var RES_DAY = new Array(8);
+    RES_DAY[0] = "{{lbl_all}}";
+    RES_DAY[1] = "{{day_1}} {{month_1}}({{week_1}})";
+    RES_DAY[2] = "{{day_2}} {{month_2}}({{week_2}})";
+    RES_DAY[3] = "{{day_3}} {{month_3}}({{week_3}})";
+    RES_DAY[4] = "{{day_4}} {{month_4}}({{week_4}})";
+    RES_DAY[5] = "{{day_5}} {{month_5}}({{week_5}})";
+    RES_DAY[6] = "{{day_6}} {{month_6}}({{week_6}})";
+    RES_DAY[7] = "{{day_7}} {{month_7}}({{week_7}})";
+    var RES_POINTS3="{{lbl_points3}}";
+    var RES_TIEBREAK3="{{lbl_tiebreak3}}";
+    var RES_POINTS5="{{lbl_points5}}";
+    var RES_TIEBREAK5="{{lbl_tiebreak5}}";
+    var RES_ADVANTAGE_HINT="{{lbl_advantage}}";
+    var RES_POINTS_HINT="{{lbl_points_hint}}";
+    var RES_TIEBREAK_HINT="{{lbl_tiebreak_hint}}";
+    var RES_SELECTONE = "{{lbl_hr_PlzSelectOne}}";
+    var RES_NoParlayMsg = "{{lbl_NoParlayGames}}";
+
+    //--------click-----------------------
+    var strMonth = new Array('{{Jan}}', '{{Feb}}', '{{Mar}}', '{{Apr}}', '{{May}}', '{{Jun}}', '{{Jul}}', '{{Aug}}', '{{Sept}}', '{{Oct}}', '{{Nov}}', '{{Dec}}');
+    var year = {{year}};
+    var month = {{month}};
+    var day = {{day}};
+    var hrs = {{hrs}};
+    var min = {{min}};
+    var sec = {{sec}};
+    var lbl_AM='{{AM}}';
+    var lbl_PM='{{PM}}';
+    //-----Message--------------------
+    var UsernameemptyMsg='{{Usernameempty}}';
+    var PasswordemptyMsg='{{Passwordempty}}';
+    var ValidtionemptyMsg='{{Validtionempty}}';
+    var NotSupportAddFavorites='{{NotSupportAddFavorites}}';
+    var NotSupportSetHome='{{NotSupportSetHome}}';
+    </script>
+
+    <script type="text/javascript" src="Script/jquery/jquery.js?v=[[Script/jquery/jquery.js]]"></script>
+    <script type="text/javascript" src="Script/common.js?v=20100226"></script>
+    <script type="text/javascript" src="Script/refer.js?v=[[Script/refer.js]]"></script>
+    <script language="JavaScript" type="text/javascript" src="Script/cookie.js?v=[[Script/cookie.js]]"></script>
+    <script language="JavaScript" type="text/javascript" src="Script/Storage.js?v=[[Script/Storage.js]]"></script>
+    <script type="text/javascript" src="Script/jquery/jquery.select.js?v=[[Script/jquery/jquery.select.js]]"></script>
+    <script type="text/javascript"  src="Script/jquery/jquery.ui.js"></script>
+    <script type="text/javascript"  src="Script/jquery/jquery.ui.autocomplete.js"></script>
+    <script type="text/javascript" src="Script/jquery/jquery.ui.control.js?v=[[Script/jquery/jquery.ui.control.js]]"></script>
+    <script type="text/javascript" src="Script/jquery/jquery.bPopup.js?v=[[Script/jquery/jquery.bPopup.js]]"></script>
+
+    </head>
+    <body onload="AsiaIinitialize();">
+    <div id="container">
+        <div id="header"></div>
+        <br class="clearfloat" />
+        <div id="mainContent">
+            <!--<div id="left"></div>-->
+            <div id="content" class="Main_position"></div>
+            <div id="WaitingContent" align="center" style="display:none; margin:auto;"><img src="{{SkinRootPath}}public/images/loading.gif?v=20090801" vspace="2" /></div>
+
+        </div>
+    <br class="clearfloat" />
+    <div id="footer"></div>
+    </div>
+    
+	
+
+
+    </body>
+</html>

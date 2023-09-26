@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<NewDataSet>
+  <Table>
+    <LangID>en</LangID>
+    <QuestionLabel>Mother's first name?</QuestionLabel>
+    <QuestionID>1</QuestionID>
+  </Table>
+  <Table>
+    <LangID>en</LangID>
+    <QuestionLabel>Name of favorite book?</QuestionLabel>
+    <QuestionID>2</QuestionID>
+  </Table>
+  <Table>
+    <LangID>en</LangID>
+    <QuestionLabel>Favorite pet's name?</QuestionLabel>
+    <QuestionID>3</QuestionID>
+  </Table>
+  <Table>
+    <LangID>en</LangID>
+    <QuestionLabel>Favorite movie?</QuestionLabel>
+    <QuestionID>4</QuestionID>
+  </Table>
+  <Table>
+    <LangID>en</LangID>
+    <QuestionLabel>Favorite hobby?</QuestionLabel>
+    <QuestionID>5</QuestionID>
+  </Table>
+  <Table>
+    <LangID>en</LangID>
+    <QuestionLabel>Favorite sport team?</QuestionLabel>
+    <QuestionID>6</QuestionID>
+  </Table>
+  <Table>
+    <LangID>en</LangID>
+    <QuestionLabel>My secret code?</QuestionLabel>
+    <QuestionID>7</QuestionID>
+  </Table>
+  <Table>
+    <LangID>ch</LangID>
+    <QuestionLabel>母親的名字？</QuestionLabel>
+    <QuestionID>1</QuestionID>
+  </Table>
+  <Table>
+    <LangID>ch</LangID>
+    <QuestionLabel>您最喜歡的書是？</QuestionLabel>
+    <QuestionID>2</QuestionID>
+  </Table>
+  <Table>
+    <LangID>ch</LangID>
+    <QuestionLabel>您最喜歡的寵物名字是？</QuestionLabel>
+    <QuestionID>3</QuestionID>
+  </Table>
+  <Table>
+    <LangID>ch</LangID>
+    <QuestionLabel>您最喜歡的電影是？</QuestionLabel>
+    <QuestionID>4</QuestionID>
+  </Table>
+  <Table>
+    <LangID>ch</LangID>
+    <QuestionLabel>您的愛好是？</QuestionLabel>
+    <QuestionID>5</QuestionID>
+  </Table>
+  <Table>
+    <LangID>ch</LangID>
+    <QuestionLabel>您喜歡的體育隊伍是？</QuestionLabel>
+    <QuestionID>6</QuestionID>
+  </Table>
+  <Table>
+    <LangID>ch</LangID>
+    <QuestionLabel>您的秘密號碼是？</QuestionLabel>
+    <QuestionID>7</QuestionID>
+  </Table>
+  <Table>
+    <LangID>cs</LangID>
+    <QuestionLabel>母亲的名字？</QuestionLabel>
+    <QuestionID>1</QuestionID>
+  </Table>
+  <Table>
+    <LangID>cs</LangID>
+    <QuestionLabel>您最喜欢的书是？</QuestionLabel>
+    <QuestionID>2</QuestionID>
+  </Table>
+  <Table>
+    <LangID>cs</LangID>
+    <QuestionLabel>您最喜欢的宠物名字是</QuestionLabel>
+    <QuestionID>3</QuestionID>
+  </Table>
+  <Table>
+    <LangID>cs</LangID>
+    <QuestionLabel>您最喜欢的电影是？</QuestionLabel>
+    <QuestionID>4</QuestionID>
+  </Table>
+  <Table>
+    <LangID>cs</LangID>
+    <QuestionLabel>您的爱好是？</QuestionLabel>
+    <QuestionID>5</QuestionID>
+  </Table>
+  <Table>
+    <LangID>cs</LangID>
+    <QuestionLabel>您喜欢的体育队伍是？</QuestionLabel>
+    <QuestionID>6</QuestionID>
+  </Table>
+  <Table>
+    <LangID>cs</LangID>
+    <QuestionLabel>您的秘密号码是？</QuestionLabel>
+    <QuestionID>7</QuestionID>
+  </Table>
+  <!-- THB -->
+  <Table>
+    <LangID>th</LangID>
+    <QuestionLabel> ชื่อจริงคุณแม่ของคุณคือ</QuestionLabel>
+    <QuestionID>1</QuestionID>
+  </Table>
+  <Table>
+    <LangID>th</LangID>
+    <QuestionLabel> หนังสือเล่มโปรดของคุณคือ</QuestionLabel>
+    <QuestionID>2</QuestionID>
+  </Table>
+  <Table>
+    <LangID>th</LangID>
+    <QuestionLabel> สัตว์เลี้ยงตัวโปรดของคุณคือ</QuestionLabel>
+    <QuestionID>3</QuestionID>
+  </Table>
+  <Table>
+    <LangID>th</LangID>
+    <QuestionLabel> หนังเรื่องโปรดของคุณคือ</QuestionLabel>
+    <QuestionID>4</QuestionID>
+  </Table>
+  <Table>
+    <LangID>th</LangID>
+    <QuestionLabel> งานอดิเรกที่คุณชื่นชอบคือ</QuestionLabel>
+    <QuestionID>5</QuestionID>
+  </Table>
+  <Table>
+    <LangID>th</LangID>
+    <QuestionLabel> ทีมฟุตบอลที่คุณชื่นชอบคือ</QuestionLabel>
+    <QuestionID>6</QuestionID>
+  </Table>
+  <Table>
+    <LangID>th</LangID>
+    <QuestionLabel> เลขรหัสลับของฉันคือ</QuestionLabel>
+    <QuestionID>7</QuestionID>
+  </Table>
+  <Table>
+    <LangID>es</LangID>
+    <QuestionLabel>Mother's first name?</QuestionLabel>
+    <QuestionID>1</QuestionID>
+  </Table>
+  <Table>
+    <LangID>es</LangID>
+    <QuestionLabel>Name of favorite book?</QuestionLabel>
+    <QuestionID>2</QuestionID>
+  </Table>
+  <Table>
+    <LangID>es</LangID>
+    <QuestionLabel>Favorite pet's name?</QuestionLabel>
+    <QuestionID>3</QuestionID>
+  </Table>
+  <Table>
+    <LangID>es</LangID>
+    <QuestionLabel>Favorite movie?</QuestionLabel>
+    <QuestionID>4</QuestionID>
+  </Table>
+  <Table>
+    <LangID>es</LangID>
+    <QuestionLabel>Favorite hobby?</QuestionLabel>
+    <QuestionID>5</QuestionID>
+  </Table>
+  <Table>
+    <LangID>es</LangID>
+    <QuestionLabel>Favorite sport team?</QuestionLabel>
+    <QuestionID>6</QuestionID>
+  </Table>
+  <Table>
+    <LangID>es</LangID>
+    <QuestionLabel>My secret code?</QuestionLabel>
+    <QuestionID>7</QuestionID>
+  </Table>
+	<!-- ID -->
+	<Table>
+		<LangID>id</LangID>
+		<QuestionLabel>Mother's first name?</QuestionLabel>
+		<QuestionID>1</QuestionID>
+	</Table>
+	<Table>
+		<LangID>id</LangID>
+		<QuestionLabel>Name of favorite book?</QuestionLabel>
+		<QuestionID>2</QuestionID>
+	</Table>
+	<Table>
+		<LangID>id</LangID>
+		<QuestionLabel>Favorite pet's name?</QuestionLabel>
+		<QuestionID>3</QuestionID>
+	</Table>
+	<Table>
+		<LangID>id</LangID>
+		<QuestionLabel>Favorite movie?</QuestionLabel>
+		<QuestionID>4</QuestionID>
+	</Table>
+	<Table>
+		<LangID>id</LangID>
+		<QuestionLabel>Favorite hobby?</QuestionLabel>
+		<QuestionID>5</QuestionID>
+	</Table>
+	<Table>
+		<LangID>id</LangID>
+		<QuestionLabel>Favorite sport team?</QuestionLabel>
+		<QuestionID>6</QuestionID>
+	</Table>
+	<Table>
+		<LangID>id</LangID>
+		<QuestionLabel>My secret code?</QuestionLabel>
+		<QuestionID>7</QuestionID>
+	</Table>
+	<!-- VN -->
+	<Table>
+		<LangID>vn</LangID>
+		<QuestionLabel>Mother's first name?</QuestionLabel>
+		<QuestionID>1</QuestionID>
+	</Table>
+	<Table>
+		<LangID>vn</LangID>
+		<QuestionLabel>Name of favorite book?</QuestionLabel>
+		<QuestionID>2</QuestionID>
+	</Table>
+	<Table>
+		<LangID>vn</LangID>
+		<QuestionLabel>Favorite pet's name?</QuestionLabel>
+		<QuestionID>3</QuestionID>
+	</Table>
+	<Table>
+		<LangID>vn</LangID>
+		<QuestionLabel>Favorite movie?</QuestionLabel>
+		<QuestionID>4</QuestionID>
+	</Table>
+	<Table>
+		<LangID>vn</LangID>
+		<QuestionLabel>Favorite hobby?</QuestionLabel>
+		<QuestionID>5</QuestionID>
+	</Table>
+	<Table>
+		<LangID>vn</LangID>
+		<QuestionLabel>Favorite sport team?</QuestionLabel>
+		<QuestionID>6</QuestionID>
+	</Table>
+	<Table>
+		<LangID>vn</LangID>
+		<QuestionLabel>My secret code?</QuestionLabel>
+		<QuestionID>7</QuestionID>
+	</Table>
+	<!-- Greek-->
+  <Table>
+    <LangID>el</LangID>
+    <QuestionLabel>Όνομα μητέρας;</QuestionLabel>
+    <QuestionID>1</QuestionID>
+  </Table>
+  <Table>
+    <LangID>el</LangID>
+    <QuestionLabel>Το όνομα του αγαπημένου βιβλίου;</QuestionLabel>
+    <QuestionID>2</QuestionID>
+  </Table>
+  <Table>
+    <LangID>el</LangID>
+    <QuestionLabel>Αγαπημένη όνομα του κατοικίδιου ζώου;</QuestionLabel>
+    <QuestionID>3</QuestionID>
+  </Table>
+  <Table>
+    <LangID>el</LangID>
+    <QuestionLabel>Αγαπημένη ταινία;</QuestionLabel>
+    <QuestionID>4</QuestionID>
+  </Table>
+  <Table>
+    <LangID>el</LangID>
+    <QuestionLabel>Το αγαπημένο χόμπι;</QuestionLabel>
+    <QuestionID>5</QuestionID>
+  </Table>
+  <Table>
+    <LangID>el</LangID>
+    <QuestionLabel>Αγαπημένη ομάδα του αθλητισμού;</QuestionLabel>
+    <QuestionID>6</QuestionID>
+  </Table>
+  <Table>
+    <LangID>el</LangID>
+    <QuestionLabel>μυστικό κωδικό μου;</QuestionLabel>
+    <QuestionID>7</QuestionID>
+  </Table>
+</NewDataSet >

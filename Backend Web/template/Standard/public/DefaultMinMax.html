@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<link href="{{SkinPublicPath}}css/table_w.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="Script/Member.js?v=20140506"></script>
+
+<script language="javascript" type="text/javascript">
+
+
+    </script>
+</head>
+<body>
+    <form name="frmDefMinMax" id="frmDefMinMax">
+   <div id="BetSetting">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="10"><img src="{{SkinPublicPath}}images/icon_title.gif"/></td>
+        <td><h1>{{lbl_DefaultMinMax}}</h1></td>
+      </tr>
+    </table>
+
+    <div>
+      <table width= "100%" cellpadding="0" cellspacing="0" class="tabstyle02">
+                  <tr>
+          <th colspan="4" class="tabbox">{{lbl_GameProivder}}</th>
+        </tr>
+        <tr align="center">
+          <th colspan="2">&nbsp;</th>
+          <th>{{lbl_MinBet}}</th>
+          <th>{{lbl_MaxBet}}</th>
+        </tr>
+        <tr align="center">
+          <th colspan="2">{{lbl_SlotGame}}</th>
+          <td><input type="text" value="{{DefaultMin_1_1}}" id="DefaultMin_1_1" name="DefaultMin_1_1" /></td>
+          <td><input type="text" value="{{DefaultMax_1_1}}" id="DefaultMax_1_1" name="DefaultMax_1_1"/></td>
+        </tr>
+
+      </table>
+    </div>
+        <div>
+      <table width= "100%" cellpadding="0" cellspacing="0" class="tabstyle02">
+                  <tr>
+          <th colspan="4" class="tabbox">{{lbl_GameProivder}}</th>
+        </tr>
+        <tr align="center">
+          <th colspan="2">&nbsp;</th>
+          <th>{{lbl_MinBet}}</th>
+          <th>{{lbl_MaxBet}}</th>
+        </tr>
+        <tr align="center">
+          <th colspan="2">{{lbl_LiveCasino}}</th>
+          <td><input type="text" value="{{DefaultMin_2_2}}"  id="DefaultMin_2_2" name="DefaultMin_2_2" /></td>
+          <td><input type="text" value="{{DefaultMax_2_2}}"  id="DefaultMax_2_2" name="DefaultMax_2_2" /></td>
+        </tr>
+      </table>
+    </div>
+
+      <div>
+      <table width= "100%" cellpadding="0" cellspacing="0" class="tabstyle02">
+                  <tr>
+          <th colspan="4" class="tabbox">{{lbl_GameProivder}}</th>
+        </tr>
+        <tr align="center">
+          <th colspan="2">&nbsp;</th>
+          <th>{{lbl_MinBet}}</th>
+          <th>{{lbl_MaxBet}}</th>
+        </tr>
+        <tr align="center">
+          <th colspan="2">{{lbl_Keno}}</th>
+          <td><input type="text" value="{{DefaultMin_3_3}}" id="DefaultMin_3_3" name="DefaultMin_3_3"/></td>
+          <td><input type="text" value="{{DefaultMax_3_3}}" id="DefaultMax_3_3" name="DefaultMax_3_3"/></td>
+        </tr>
+
+
+      </table>
+    </div>
+  </div>
+        </form>
+      <div id="Button" class="btnarea">       
+      <a id="btnSubmit" name="btnSubmit" onclick ="DoUpdDefaultMinMax();" class="btngy"><span>{{lbl_submit}}</span></a>        
+  </div>  
+</body>
+</html>

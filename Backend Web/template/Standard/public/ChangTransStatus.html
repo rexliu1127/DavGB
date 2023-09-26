@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<link href="{{SkinPublicPath}}css/table_w.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="10"><img src="{{SkinPublicPath}}images/icon_title.gif" /></td>
+    <td><h1>{{lbl_ChangeStatus}} </h1></td>
+  </tr>
+</table>
+<div class="boxgy">
+  <table width="100%" align="center" cellpadding="0" cellspacing="0" class="tabstyle03">
+      <tr>
+        <th width="50%">{{lbl_UserName}}</th>
+        <td>{{UserName}}</td>
+
+    </tr>
+    <tr>
+        <th width="50%">{{lbl_OldStatus}}</th>
+        <td>{{OldStatus}}</td>
+
+    </tr>
+    <tr>
+        <th  width="50%">{{lbl_ChangeStatus}}</th>
+        <td>    
+            <select id="selChangeNewStatus" >
+                <option value="0" >{{Status_0}}</option>
+                <option value="1">{{Status_1}}</option>
+                <option value="2">{{Status_2}}</option>
+                <option value="3">{{Status_3}}</option>
+                <option value="4">{{Status_4}}</option>
+                <option value="5">{{Status_5}}</option>
+            </select>
+        </td>
+    </tr>
+          <tr>
+        <th width="50%">{{lbl_Memo}}</th>
+        <td><input type="text" id="txtMemo" name="txtMemo" value="{{Memo}}" /></td>
+
+    </tr>
+  </table>
+  <div class="btnarea">
+  <a onclick="CloseBPopup();" class="btngy" ><span>{{lbl_cancel}}</span></a>
+  <a onclick ="DoChangeTransStatus('{{ToTID}}');" class="btngy"><span>{{lbl_submit}}</span></a>
+  </div>
+</div>
+</body>
+</html>

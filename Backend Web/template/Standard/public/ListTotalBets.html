@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--<script language="JavaScript" type="text/javascript" src="../Script/gotoMain.js?v=20120201"></script>
+--><script type="text/javascript" src="../Script/TotalBets.js"></script>
+<script type="text/javascript" src="../Script/jscalendar/calendar.js"></script>
+<script type="text/javascript" src="../Script/jscalendar/lang/calendar-en.js"></script>
+<script type="text/javascript" src="../Script/jscalendar/calendar-setup.js"></script>
+<link href="{{SkinPublicPath}}css/table_w.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" media="all" href="../Script/jscalendar/calendar-blue.css" title="win2k-cold-1" />
+<title></title>
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="10"><img src="{{SkinPublicPath}}images/icon_title.gif" /></td>
+    <td><h1>{{lbl_TotalBets}} - {{GameType}}</h1></td>
+  </tr>
+</table>
+<div class="boxgy">
+  <table border="0" cellspacing="0" width="100%">
+    <tbody>
+      <tr align="center">
+        <td><span class="style2"> {{lbl_from}}
+          <input name="s_date" id="s_date" type="text" value="{{FromDate}}" size="16" maxlength="12" readonly/>
+          <a href="#"><img src="../template/Standard/public/images/layout/img.GIF" width="18" height="18" border="0" class="code" name="f_trigger_b" id="f_trigger_b"/></a>{{lbl_to}}
+          <script type="text/javascript">
+              Calendar.setup({
+                  inputField: "s_date",      // id of the input field
+                  ifFormat: "m/d/y",       // format of the input field
+                  button: "f_trigger_b",   // trigger for the calendar (button ID)
+                  flatCallback: dateChangedTos_date,
+                  singleClick: true           // double-click mode
+              });
+	                </script>
+          <input name="e_date" id="e_date" type="text" value="{{ToDate}}" size="16" maxlength="12" readonly/>
+          <a href="#"><img src="../template/Standard/public/images/layout/img.GIF" width="18" height="18" border="0" class="code" name="f_trigger_b2" id="f_trigger_b2"/></a>
+          <script type="text/javascript">
+              Calendar.setup({
+                  inputField: "e_date",      // id of the input field
+                  ifFormat: "m/d/y",       // format of the input field
+                  button: "f_trigger_b2",   // trigger for the calendar (button ID)
+                  flatCallback: dateChangedToe_date,
+                  singleClick: true           // double-click mode
+              });
+                        </script>
+            GMT+8 12:00
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="btnarea" id="Button">
+  <a onclick ="javascript:DoTotalBetsSearch('{{GameTypeID}}','{{GameType}}');" class="btngy"><span>{{lbl_submit}}</span></a>
+          <input type="hidden" name="eroMeg" id="eroMeg" value="{{err_Result_Date}}"/>
+    <a onclick ="javascript:SetStartEndDate('{{TSDate}}','{{TEDate}}');DoTotalBetsSearch('{{GameTypeID}}','{{GameType}}');" class="btngy"><span>{{lbl_Today}}</span></a>
+    <a onclick ="javascript:SetStartEndDate('{{YSDate}}','{{YEDate}}');DoTotalBetsSearch('{{GameTypeID}}','{{GameType}}');" class="btngy"><span>{{lbl_Yesterday}}</span></a>
+    <a onclick ="javascript:SetStartEndDate('{{LWSDate}}','{{LWEDate}}');DoTotalBetsSearch('{{GameTypeID}}','{{GameType}}');" class="btngy"><span>{{lbl_LastWeek}}</span></a>
+    <a onclick ="javascript:SetStartEndDate('{{TWSDate}}','{{TWEDate}}');DoTotalBetsSearch('{{GameTypeID}}','{{GameType}}');" class="btngy"><span>{{lbl_ThisWeek}}</span></a>
+    <a onclick ="javascript:SetStartEndDate('{{LMSDate}}','{{LMEDate}}');DoTotalBetsSearch('{{GameTypeID}}','{{GameType}}');" class="btngy"><span>{{lbl_LastMonth}}</span></a>
+    <a onclick ="javascript:SetStartEndDate('{{TMSDate}}','{{TMEDate}}');DoTotalBetsSearch('{{GameTypeID}}','{{GameType}}');" class="btngy"><span>{{lbl_ThisMonth}}</span></a>
+
+</div>
+</div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><h1>{{lbl_From}} {{FromDate}} {{lbl_To}} {{ToDate}}</h1></td>
+  </tr>
+</table>
+
+<div style="display:{{NoDataDisplay}}">
+    {{lbl_NoData}}
+</div>
+
+<div style="display:{{DataDisplay}}">
+  <table width="100%" cellpadding="0" cellspacing="0" class="tabstyle02">
+    <tr>
+      <th width="8%" >{{lbl_GameProivder}}</th>
+      <th width="8%" >{{lbl_BetCount}}</th>
+      <th width="8%">{{lbl_Running}}</th>
+      <th width="8%" >{{lbl_Settled}}</th>
+      <th width="8%" >{{lbl_total2}}</th>
+
+    </tr>
+
+    <!-- BEGIN TotalBetsData -->
+    <tr class="{{IntervalColor}}">
+      <td align="center"> {{GameProivder}}</td>
+      <td align="right" >{{BetCount}}</td>
+      <td align="right"> <a href="javascript:OpenWinLossBetList('{{SubID}}','{{SubRole}}','{{SubUserName}}','{{FromDate}}','{{ToDate}}');">{{RunningTotal}} </a></td>
+      <td align="right"> <a href="javascript:OpenWinLossBetList('{{SubID}}','{{SubRole}}','{{SubUserName}}','{{FromDate}}','{{ToDate}}');">{{SettledTotal}} </a></td>
+ 
+      <td align="right"> {{TotalBets}} </td>
+  </tr>
+    <!-- END TotalBetsData -->
+    <tr class="League_bg">
+      <td align="center"> {{lbl_total2}} </td>
+      <td align="right">{{SumBetCount}}</td>
+      <td align="right"> {{SumRunning}} </td>
+      <td align="right"> {{SumSettled}} </td>
+      <td align="right"> {{SumTotal}} </td>
+
+   </tr>
+  </table>
+</div>
+</body>
+</html>

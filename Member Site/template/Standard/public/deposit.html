@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<!-- Template by quackit.com -->
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>2 Rows Frames Layout (header frame)</title>
+<link href="{{SkinRootPath}}public/css/table_w.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="Script/jscalendar/calendar-blue.css" title="win2k-cold-1" />
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 100%;
+	max-height: 100%;
+	font-family:Sans-serif;
+}
+
+</style>
+
+    <script>
+        function ChangeDeositType()
+        {
+
+            var e = document.getElementById("selTransferType");
+            var sel = e.options[e.selectedIndex].value;
+
+            if (sel == 1) {
+
+                parent.frmDepositBody.location.href = 'QuickQuickTransfer.aspx';
+            }
+            else {
+
+                parent.frmDepositBody.location.href = 'aopDeposit.aspx';
+            }
+        }
+        </script>
+		</head>
+
+		<body>
+<header id="dep_header">
+          <div id="dep_logo">
+    <table width="100%" border="0">
+              <tr>
+        <td width="80"><h1>{{lbl_DepositFrom}}</h1></td>
+        <td><select name="selTransferType" id="selTransferType" onchange ="ChangeDeositType();">
+            <option value="1" selected="selected">{{lbl_QuickTransfer}}</option>
+            <option value="2">{{lbl_Alipay}}</option>
+          </select></td>
+      </tr>
+            </table>
+  </div>
+</header>
+
+</body>
+</html>

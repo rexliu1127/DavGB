@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="{{SkinPublicPath}}css/table_w.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="Script/Bank.js?v=20140506"></script>
+    <script>
+        var enterBankName = '{{lbl_PleaseInput}}' + '{{lbl_BankName}}'
+        var enterBankAccount = '{{lbl_PleaseInput}}' + '{{lbl_BankAccount}}'
+        </script>
+</head>
+<body>
+    <form action="User/UpdUser.aspx" method="post" id="frmEdieBank" name="frmEdieBank" >
+  <div id="CustomerInfo">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td id="CustomerInfoContentTitle" class="titleOpen"><a href="javascript:ShowHideEditDiv('CustomerInfoContent');">{{lbl_EditBank}}</a></td>
+      </tr>
+    </table>
+    <div id="CustomerInfoContent">
+      <table width= "100%" cellpadding="0" cellspacing="0" class="tabstyle02">
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_BankCode}} </th>
+          <td width="40%">  <input type="text" id="txtBankCode" name="txtBankCode" value="{{BankCode}}" /></td>
+          <th width="10%" nowrap="nowrap">{{lbl_BankName}} * </th>
+          <td width="40%">
+                <input type="text" id="txtBankName" name="txtBankName" value="{{Name}}" />
+          </td>
+        </tr>
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_BankAccount}} * </th>
+          <td width="40%"><input type="text" id="txtBankAccount" name="txtBankAccount" value="{{BankAccount}}" /></td>
+                <th width="10%" nowrap="nowrap">{{lbl_Status}} </th>
+          <td width="40%">
+              <input name="selStatus" id="selStatus" type="radio" class="noborder" value="1" {{Open}} />
+                        {{lbl_Open}}
+                        <input name="selStatus" id="selStatus" type="radio" class="noborder" value="0" {{Closed}} />
+                        {{lbl_Closed}}
+          </td>
+
+        </tr>
+
+    
+      </table>
+    </div>
+  </div>
+
+  <br />
+  <div id="Button" class="btnarea">   
+      <a  onclick ="CloseBPopup();" class="btngy"><span>{{lbl_cancel}}</span></a>          
+      <a id="btnSubmit" name="btnSubmit" onclick ="DoEditBank();" class="btngy"><span>{{lbl_submit}}</span></a>  
+  </div>
+  <input type="hidden" id="RT" name="RT" value="upd" />
+  <input type="hidden" id="ToBankID" name="ToBankID" value="{{ToBankID}}" />
+</form>
+</body>
+</html>

@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title></title>
+<link href="{{SkinRootPath}}css/table_w.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="Script/jscalendar/calendar-blue.css" title="win2k-cold-1" />
+
+    <script type="text/javascript" src="../Script/jscalendar/calendar.js"></script>
+<script type="text/javascript" src="../Script/jscalendar/lang/calendar-en.js"></script>
+<script type="text/javascript" src="../Script/jscalendar/calendar-setup.js"></script>
+        <script type="text/javascript" src="../Script/Report.js"></script>
+        <script  type="text/javascript">
+            var defTranstype = '{{defTranstype}}';
+            var defTransStatus = '{{defTransStatus}}';
+
+       
+                $('#selTransType option[value=' + defTranstype + ']').attr('selected', true);
+                $('#selTransStatus option[value=' + defTransStatus + ']').attr('selected', true);
+            
+
+            function dateChangedTos_date(calendar) {
+                if (calendar.dateClicked) {
+                    var y = calendar.date.getFullYear();
+                    var m = calendar.date.getMonth(); // integer, 0..11
+                    var d = calendar.date.getDate(); // integer, 1..31
+                    document.getElementById('s_date').value = (m + 1) + "/" + d + "/" + y;
+                }
+            }
+            function dateChangedToe_date(calendar) {
+                if (calendar.dateClicked) {
+                    var y = calendar.date.getFullYear();
+                    var m = calendar.date.getMonth(); // integer, 0..11
+                    var d = calendar.date.getDate(); // integer, 1..31
+                    document.getElementById('e_date').value = (m + 1) + "/" + d + "/" + y;
+                }
+            }
+
+
+        </script>
+		</head>
+
+		<body>
+<header id="dep_header">
+          <div id="dep_logo">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="10"><img src="{{SkinRootPath}}images/icon_title.gif" /></td>
+    <td><h1>{{lbl_Audit}}</h1></td>
+  </tr>
+</table>
+            
+  </div>
+</header>
+
+    <form id="frmDoAudit" name="frmDoAudit" action="/Report/Audit.aspx" method="post">
+
+      <div class="boxgy">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabstyle01">
+          <tr>
+            <th width="150">{{lbl_from}}</th>
+            <td nowrap><label for="select">
+                          <input name="s_date" id="s_date" type="text" value="{{FromDate}}" size="16" maxlength="12" readonly/>
+          <a href="#"><img src="../template/Standard/public/images/layout/img.GIF" width="18" height="18" border="0" class="code" name="f_trigger_b" id="f_trigger_b"/></a>
+          <script type="text/javascript">
+              Calendar.setup({
+                  inputField: "s_date",      // id of the input field
+                  ifFormat: "m/d/y",       // format of the input field
+                  button: "f_trigger_b",   // trigger for the calendar (button ID)
+                  flatCallback: dateChangedTos_date,
+                  singleClick: true           // double-click mode
+              });
+	       </script>
+
+              {{lbl_to}}
+                          
+           <input name="e_date" id="e_date" type="text" value="{{ToDate}}" size="16" maxlength="12" readonly/>
+          <a href="#"><img src="../template/Standard/public/images/layout/img.GIF" width="18" height="18" border="0" class="code" name="f_trigger_b2" id="f_trigger_b2"/></a>
+          <script type="text/javascript">
+              Calendar.setup({
+                  inputField: "e_date",      // id of the input field
+                  ifFormat: "m/d/y",       // format of the input field
+                  button: "f_trigger_b2",   // trigger for the calendar (button ID)
+                  flatCallback: dateChangedToe_date,
+                  singleClick: true           // double-click mode
+              });
+                        </script>
+                GMT+8 12:00
+            </label></td>
+          </tr>
+          <tr>
+            <th width="150">{{lbl_TransactionType}}</th>
+            <td nowrap>
+             <select name="selTranstype" id="selTransType" style="margin-right:10px">
+
+                 <option value="1" >{{lbl_Deposit}}</option>
+                 <option value="2">{{lbl_Withdrawal}}</option>
+             </select>
+              {{lbl_Status}}
+              <select name="selTransStatus" id="selTransStatus" style="margin-right:10px">
+       
+                <option value="0" >{{Status_0}}</option>
+                <option value="1">{{Status_1}}</option>
+                <option value="2">{{Status_2}}</option>
+                <option value="3">{{Status_3}}</option>
+                <option value="4">{{Status_4}}</option>
+                <option value="5">{{Status_5}}</option>
+
+            </select></td>
+          </tr>
+        </table>
+                      <input type="hidden" id="hidDo" name="hidDo" value="" />
+             
+  <div id="Button" class="btnarea">
+    <div class="btnstyle" style="text-align:center;">
+      <a id="btnAuditsearch" name="btnAuditsearch"  class="btngy" href="javascript:DoAuditSearch();"><span>{{lbl_Submit}}</span></a>
+    </div>
+  </div>
+
+</div>
+               </form>
+ <div>
+ <table class="tabstyle02">
+              <tr>
+        <th>*</th>
+        <th>{{lbl_UserName}}</th>
+        <th>{{lbl_Status}}</th>
+        <th>{{lbl_TransactionId}}</th>
+        <th>{{lbl_ReferenceNo}}</th>
+        <th>{{lbl_Way}}</th>
+        <th>{{lbl_BankAccount}}</th>
+         <th>{{lbl_CBankName}}</th>
+         <th>{{lbl_CBankAccountName}}</th>               
+        <th>{{lbl_CBankAccountNo}}</th>               
+        <th>{{lbl_date}}</th>
+        <th>{{lbl_amount}}</th>
+        <th>{{lbl_remark}}</th>
+        </tr>
+        <!-- BEGIN TransData -->
+        <tr>
+             <td align="center">{{Number}}</td>
+             <td align="center">{{UserName}}</td>
+                         <td align="center"><a href="javascript:" onclick="OpenChangTransStatus('{{Status}}','{{TransactionId}}','{{UserName}}','{{remark}}');" > {{Status}}</a></td>
+            <td align="right">{{TransactionId}}</td>
+            <td align="right">{{ReferenceNo}}</td>
+            <td align="center">{{Way}}</td>
+                        <td align="right">{{BankAccount}}</td>
+                        <td align="right">{{CBankName}}</td>
+                        <td align="right">{{CBankAccountName}}</td>
+                        <td align="right">{{CBankAccountNo}}</td>
+            <td align="center">{{date}}</td>
+            <td align="right">{{amount}}</td>
+            <td align="right">{{remark}}</td>
+        </tr>
+        <!-- END TransData -->
+        </table>
+</div>
+    
+<div id="divPopup" class="popup2" style="display:none"><span class="spop_button b-close"><span>X</span></span>
+  <div class="content" style="height: auto; width: auto;">
+    <div class="b-ajax-wrapper" style=""></div>
+  </div>
+</div>
+</body>
+</html>

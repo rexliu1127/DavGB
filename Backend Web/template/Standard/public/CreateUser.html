@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<link href="{{SkinPublicPath}}css/table_w.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="Script/Users.js?v=20140506"></script>
+<!--<script language="JavaScript" type="text/javascript" src="Script/gotoMain.js?v=20120201"></script>
+-->
+<script language="javascript" type="text/javascript">
+
+    var Res_UserNameErr = '{{lbl_UserNameErr}}';
+    var err_enter_pw = '{{lbl_enter_pw}}';
+    var err_execPassword = '{{lbl_execPassword}}';
+
+    </script>
+</head>
+<body>
+<form action="User/InsUser.aspx" method="post" id="frmCreateUser" name="frmCreateUser" target="ifmInsUdp">
+  <div id="CustomerInfo">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="10"><img src="{{SkinPublicPath}}images/icon_title.gif" /></td>
+        <td><h1>{{lbl_NewAccount}}</h1></td>
+      </tr>
+    </table>
+    <div>
+      <table width= "100%" cellpadding="0" cellspacing="0" class="tabstyle02">
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_UserName}} *</th>
+          <td width="40%">
+            <input type="text" id="txtUserName" name="txtUserName" />
+          </td>
+          <th width="10%" nowrap="nowrap">{{lbl_Password}} *</th>
+          <td width="40%"><input type="password" name= "txtUserPwd" id="txtUserPwd" />
+            <input type="hidden" name="txthidUserpwd" id="txthidUserpwd" />
+          </td>
+        </tr>
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_FirstName}}</th>
+          <td width="40%"><input type="text" id="txtFirstname" name="txtFirstname" /></td>
+          <th width="10%" nowrap="nowrap">{{lbl_LastName}}</th>
+          <td width ="40%"><input type ="text" id="txtLastname" name="txtLastname" /></td>
+        </tr>
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_Phone}}</th>
+          <td width="40%"><input type="text" id="txtPhone" name="txtPhone" /></td>
+                      <th width="10%" nowrap="nowrap">{{lbl_EMail}}</th>
+          <td width="40%"><input type="text" id="txtMail" name="txtMail" /></td>
+        </tr>
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_Permissions}}</th>
+          <td width="40%">{{lbl_Member}}<input type="checkbox" id="chkMember" name="chkMember" value="1" />
+              {{lbl_Bank}}<input type="checkbox" id="chkBank" name="chkBank" value="1"  />
+              {{lbl_TotalBets}}<input type="checkbox" id="chkTotalBets" name="chkTotalBets" value="1"  />
+              {{lbl_Reports}}<input type="checkbox" id="chkReports" name="chkReports" value="1"  />
+              {{lbl_Setting}}<input type="checkbox" id="chkSetting" name="chkSetting" value="1"  />
+          </td>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+
+
+  <br />
+  <div id="Button" class="btnarea">   
+      <a id="btnSubmit" name="btnSubmit" onclick ="DoInsUser();" class="btngy"><span>{{lbl_submit}}</span></a>        
+  </div>
+    
+
+</form>
+<iframe name="ifmInsUdp" id="ifmInsUdp" src="" style="display: none"></iframe>
+
+</body>
+</html>

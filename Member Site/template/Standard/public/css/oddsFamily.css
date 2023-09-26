@@ -1,0 +1,125 @@
+.HalfTime
+{
+	font-family: "Segoe UI",Arial,Helvetica,sans-serif !important;
+	font-size: 9px;
+	font-weight: bold;
+	color: #0000FF;
+}
+
+.IsLive
+{
+	font-family: "Segoe UI",Arial,Helvetica,sans-serif !important;
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+
+.LiveTime
+{
+	font-family: "Segoe UI",Arial,Helvetica,sans-serif !important;
+	font-size: 9px;
+	font-weight: bold;
+	color: #FF0000;
+}
+
+.text_time
+{
+	font-size: 10px;
+	color: #666666;
+	text-align: center;
+}
+.text_time a
+{
+	font-size: 10px;
+	color: #666666;
+	text-align: center;
+}
+.text_timeR
+{
+	font-size: 11px;
+	color: #eb6307;
+	text-align: center;
+}
+
+.BetprocessMinBet
+{
+	font-size: 11px;
+	height: 20px;
+	color: #003399;
+}
+
+
+.BetprocessMaxBet
+{
+	font-size: 11px;
+	height: 20px;
+	color: #FF0000;
+}
+
+.OddsDiv
+{
+	width:36px;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.FavOddsClass, .FavOddsClass a{ color: #B50000 !important; font-weight: bold;}
+.FavOddsClass span{ color: #B50000 !important; font-weight: bold;}
+.FavTeamClass, .FavTeamClass a{ color: #B50000; font-weight: bold;}
+.FavTeamClass span{ color: #B50000; font-weight: bold;}
+
+.UdrDogOddsClass, .UdrDogOddsClass a{color: #01122B !important;font-weight: bold;}
+.UdrDogOddsClass span{ color: #01122B !important; font-weight: bold;}
+.UdrDogTeamClass, .UdrDogTeamClass a{ color: #333; font-weight: bold;}
+.UdrDogTeamClass span{color: #01122B;font-weight: bold;}
+
+.HdpGoalClass, .HdpGoalClass a{	color: #6A6A6A;	font-weight: bold;}
+.HdpGoalClass span{ color: #878787; font-weight: bold;} 
+
+/*.betpad > .HdpGoalClass, .betpad > .FavOddsClass, .betpad > .UdrDogOddsClass{font-size: 18px !important;line-height: 20px!important;}
+.betpad > .tabcontbu, .betpad > .tabcontrd, .betpad > .ScoreClass{
+	font-size: 18px !important;
+	line-height: 20px!important;
+}*/
+
+.ScoreClass {
+	font-size: 14px;
+	color: #000000;
+	font-weight:bold;	
+	font-family:Tahoma;
+}
+
+.styleblack
+{
+	font-family: "Segoe UI",Arial,Helvetica,sans-serif !important;
+	font-size: 12px;
+}
+.ch_Point {
+	color: #666666 !important;
+	font-weight: bold;
+	font-size: 11px;
+	text-align: center;
+	padding: 0px !important;
+	line-height: 2ex !important;
+}
+.en_Point {
+	color: #666666 !important;
+	font-weight: bold;
+	font-size: 11px;
+	text-align: center;
+	padding: 0px !important;
+	line-height: 1ex !important;
+}
+
+.bgcpe{	background-color: #ffffff;}
+.bgcpelight{ background-color: #FFFFFF;}
+/*.live{ background-color: #ffccbc;}
+.livelight{ background-color: #ffddd2;}*/
+
+/*odds change*/
+/*.change_up{
+	background-image: url(../../public/images/layout/odds_arr.gif);
+	background-repeat: repeat-x;
+	background-position: 0px -8px;
+
+}*/

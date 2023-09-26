@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Description" content="SponDemo offers online sport betting and football betting" />
+<meta name="Keywords" content="online betting, sport betting, football betting, sports betting, tennis betting, golf betting, online sports betting, soccer betting, online gambling" />
+<link href="{{SkinPublicPath}}css/head_layout.css?v=20101215" rel="stylesheet" type="text/css" />
+<link href="{{SkinPublicPath}}css/jquery.selectbox.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Script/jquery/jquery.select.js?v=[[Script/jquery/jquery.select.js]]"></script>
+<script type="text/javascript" src="Script/Header.js?v=[[Script/Header.js]]"></script>
+<script language="JavaScript" type="text/javascript" src="Script/Users.js?v=20120201"></script>
+<script language="JavaScript" type="text/javascript" src="Script/Cookie.js?v=20120201"></script>
+<script type="text/javascript">
+    InitHeadAF(); 
+</script>
+</head>
+<body >
+<div class="container">
+  <div id="containerHead">
+    <div id="Logo"><a href="#"><img src="{{SkinPublicPath}}images/spacer.gif" width="200" height="50" border="0"/></a></div>
+    <div id="containerTopright">
+      <table border="0" align="right" cellpadding="0" cellspacing="0" class="loginbox">
+        <tr>
+          <td nowrap="nowrap"><div id="welcome">{{lbl_Welcome}},<b> {{UserName}}</b><span class="time"  id="spClock">{{Now}} GMT +8</span></div>
+          </td>
+          <td rowspan="2" valign="top" nowrap="nowrap"><a href="javascript:DoLogout();" class="css_btn_class">{{lbl_Logout}}</a></td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="90%"><div class="cp" style="float:right;"> <a href="javascript:SwtichContent('/ChangePWD.aspx');"><img src="{{SkinPublicPath}}images/layout/key-pencil.png" width="16" height="16" border="0" />{{lbl_ChangePassword}}</a></div></td>
+                <td><div class="lan" style="float:right;">
+                    <select name="selLan" id="selLan" >
+                      <option class="flag-en sbGroup" value="en">English</option>
+                      <option class="flag-ch sbGroup" value="ch">繁體中文</option>
+                      <option class="flag-cs sbGroup" value="cs">简体中文</option>
+                    </select>
+                </div></td>
+              </tr>
+          </table></td>
+        </tr>
+<tr></tr>
+    </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<form id="frmChangeLang" name="frmChangeLang" method="post" action="Main.aspx">
+  <input id="hidSelLang" name="hidSelLang" type="hidden" />
+</form>
+<form name="frmlogout" id="frmlogout" action="Logout.aspx">
+</body>
+</html>

@@ -1,0 +1,77 @@
+@charset "utf-8";
+a {text-decoration: none; color: #FFFFFF;}
+a:hover{color: #b6999c;text-decoration: none; }
+
+/*Footer*/
+#containerFooter {
+  background:#3B5998;
+  color:#fff;
+  text-align:center;
+  /*padding:5px;*/
+  width:100%;
+  position:fixed;
+  bottom:0;
+  z-index:100;
+}
+
+#otherinfo-right {
+	font-size: 11px;
+	color: #FFFFFF;
+	float: right;
+	line-height: 18px;
+	text-align: right;
+}
+#otherinfo-left {
+	font-size: 11px;
+	color: #FFFFFF;
+	float: left;
+	line-height: 18px;
+}
+
+.Copyright {
+	font-size: 11px;
+	line-height: 18px;
+}
+
+.panntner-logo{
+	background-image: url(../images/layout/EURO/Footer_icon_panntner.png);
+	_background-image:url('');
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/template/deposit/public/images/layout/EURO/Footer_icon_panntner.png', sizingMethod='crop');
+	background-repeat: no-repeat;
+	background-position: left 0px;
+	height: 23px;
+	display: inline-block;
+}
+
+.Security-logo{
+	background-image: url(../images/layout/EURO/Footer_icon_Security.png);
+	
+	background-repeat: no-repeat;
+	background-position: -3px 0px;
+	height: 20px;
+	display: inline-block;
+	width:258px;
+_background-image: url('');
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/template/deposit/public/images/layout/EURO/Footer_icon_Security.png', sizingMethod='crop');
+}
+.Browser-logo{
+	background-image: url(../images/layout/EURO/Footer_icon_Browser.png);
+	_background-image: url('');
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/template/deposit/public/images/layout/EURO/Footer_icon_Browser.png', sizingMethod='crop');
+	background-repeat: no-repeat;
+	background-position: -3px 0px;
+	height: 20px;
+	display: inline-block;
+
+}
+.share-logo{
+	background-image: url(../images/layout/EURO/Footer_icon_share.png);
+	_background-image:url('');
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/template/deposit/public/images/layout/EURO/Footer_icon_share.png', sizingMethod='crop');
+	background-repeat: no-repeat;
+	background-position: left 0px;
+	height: 20px;
+	display: inline-block;
+}
+
+/*End Footer*/

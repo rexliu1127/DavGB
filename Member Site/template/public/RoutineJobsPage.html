@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/JavaScript">
+<!--
+var MenuData_topmenu_versionkey = "";
+var MenuData_Early_versionkey = "";
+var MenuData_Today_versionkey = "";
+var MenuData_Live_versionkey = "";
+
+function reloadMenuData()
+{
+	var frmMenuData=document.getElementById('frmMenuData');
+	frmMenuData.hidMenuMarket_versionkey.value = MenuData_topmenu_versionkey;
+
+	frmMenuData.hidMenuEarly_versionkey.value = MenuData_Early_versionkey;
+	frmMenuData.hidMenuToday_versionkey.value = MenuData_Today_versionkey;
+	frmMenuData.hidMenuLive_versionkey.value = MenuData_Live_versionkey;
+	frmMenuData.submit();
+}
+setInterval("reloadMenuData()",30000);
+//-->
+</script>
+</head>
+<body onLoad="reloadMenuData()">
+<form name="frmMenuData" id="frmMenuData" action="../../Menu_Data.aspx" target="Menu_data">
+<input type=hidden id="hidMenuMarket_versionkey" name=hidMenuMarket_versionkey value="">
+<input type=hidden id="hidMenuEarly_versionkey" name=hidMenuEarly_versionkey value="">
+<input type=hidden id="hidMenuToday_versionkey" name=hidMenuToday_versionkey value="">
+<input type=hidden id="hidMenuLive_versionkey" name=hidMenuLive_versionkey value="">
+</form>
+<iframe name="Menu_data" id="Menu_data" src="" width="0" height="0" frameborder ="0" ></iframe>
+</body>
+</html>

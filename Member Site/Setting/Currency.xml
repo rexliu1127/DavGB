@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NewDataSet>
+　<Table>
+	<LangID>en</LangID>
+	<CurrenctName>RMB</CurrenctName>
+	<CurrenctID>13</CurrenctID>
+   <NoSupportCountry></NoSupportCountry>
+　</Table>
+    <Table>
+	  <LangID>ch</LangID>
+	  <CurrenctName>RMB</CurrenctName>
+	  <CurrenctID>13</CurrenctID>
+    <NoSupportCountry></NoSupportCountry>
+  </Table>
+  <Table>
+	  <LangID>cs</LangID>
+	  <CurrenctName>RMB</CurrenctName>
+	  <CurrenctID>13</CurrenctID>
+    <NoSupportCountry></NoSupportCountry>
+  </Table>	  
+
+</NewDataSet >

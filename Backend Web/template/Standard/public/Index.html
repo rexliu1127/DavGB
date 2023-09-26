@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--iPhone-->
+<meta name="viewport" content="target-densitydpi=device-dpi, width=960, user-scalable=1"/>
+<!--Android-->
+<!--meta name="viewport" content="target-densitydpi=device-dpi, user-scalable=1"/-->
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="{{SkinPublicPath}}css/login.css">
+<script language="JavaScript" type="text/javascript" src="Script/Users.js?v=20120201"></script>
+<script language="JavaScript" type="text/javascript" src="Script/Cookie.js?v=20120201"></script>
+<script language="JavaScript" type="text/javascript" src="Script/Common.js?v=20120201"></script>
+<script language="JavaScript" type="text/javascript" src="Script/jquery/jquery.js?v=20120201"></script>
+<script type="text/javascript" src="Script/jquery/ajaxify.js?v=[[Script/jquery/ajaxify.js]]"></script>
+<script language="JavaScript" type="text/javascript" src="Script/jquery/jquery.ui.control.js?v=20120201"></script>
+<script language="javascript">
+    var err_username = '{{lbl_Username_Null}}';
+    var err_pwd = '{{lbl_PWD_Null}}';
+    var err_validation = '{{lbl_Validation_Null}}';
+</script>
+</head>
+
+<body onLoad="document.getElementById('txtUserName').focus();SetSelectedLan('{{UserLan}}');">
+
+<div class="container">
+  <div class="content">
+  <div class="logoPic"></div>
+    <div class="login">
+      <div class="panelFiled">
+      
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td rowspan="4"><img src="{{SkinPublicPath}}images/layout/lock.png" width="146" height="146"></td>
+    <th width="31%" nowrap>{{lbl_Language}}</th>
+    <td nowrap> <div class="styled-select">
+                 <select id="selLan" onChange="ChangeLan(this[this.selectedIndex].value)">
+                 <option selected="selected" value="en">English</option>
+                 <option value="ch">繁體中文</option>
+                 <option value="cs">簡体中文</option>
+                 </select>
+                 </div></td>
+  </tr>
+  <tr>
+    <th width="31%" nowrap>{{lbl_UserName}}</th>
+    <td nowrap><input id="txtUserName" type="text" onkeydown='if(event.keyCode==13)DoLogin();'></td>
+    </tr>
+  <tr>
+    <th nowrap>{{lbl_Password}}</th>
+    <td nowrap><input id="txtPWD" type="password" onkeydown='if(event.keyCode==13)DoLogin();'></td>
+    </tr>
+  <tr>
+    <th nowrap>{{lbl_Validation}}</th>
+    <td nowrap><input type="text" id="txtValidateCode" onKeyDown='if(event.keyCode==13)DoLogin();' size="6" maxlength="4">
+      <img id="imgValidateCode" src="ValidateCode.aspx?"+reloadValidateCount onClick="reloadValidatecode()"  width="79" height="30" style="margin-bottom:-10px"></td>
+    </tr>
+</table>
+      </div>
+      <div class="panelBtn">
+        <a  class="css_btn_class" href="javascript:DoLoginReset();">{{lbl_Reset}}</a>     
+        <a  class="css_btn_class" href="javascript:DoLogin();">{{lbl_Login}}</a>
+        </div>
+    </div>
+    <div class="copyRight">&copy; Copyright. Firstright Developments Limited 2014. All right reserved.</div>
+  </div>
+</div>
+<form id="frmChangeLang" name="frmChangeLang" method="post" action="index.aspx">
+<input id="hidSelLang" name="hidSelLang" type="hidden" />
+</form>
+
+<div id="test"></div>
+</body>
+</html>

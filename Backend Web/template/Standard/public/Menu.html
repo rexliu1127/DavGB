@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="{{SkinPublicPath}}css/left.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="Script/jquery/jquery-ui.js?v=[[Script/jquery/jquery-ui.js]]"></script>
+<script type="text/javascript" src="Script/jquery/jquery.ui.accordion.js?v=[[Script/jquery/jquery.ui.accordion.js]]"></script>
+<script type="text/javascript" src="Script/Menu.js?v=[[Script/Menu.js]]"></script>
+<style type="text/css">
+body {
+	margin-left: 8px;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+</style>
+
+</head>
+
+<body>
+<div id="accordion" style="display:none">
+   
+    <h3 id="hUserMgr">{{lbl_UserMgr}}</h3>
+    
+    <div class="SiteNav" id="divUserMgr"  >
+      <ul>
+        <li><a  href="javascript:SwtichContent('/User/CreateUser.aspx');"><span>{{lbl_CreateUser}}</span></a></li>
+          <li><a href="javascript:SwtichContent('/User/ListUser.aspx');"><span>{{lbl_ListUser}}</span></a></li>
+      </ul>
+    </div>
+
+    <h3 id="hMemberMgr">{{lbl_MemberMgr}}</h3>
+    
+    <div class="SiteNav" id="divMemberMgr"  >
+      <ul>
+          <li><a href="javascript:SwtichContent('/Member/ListMember.aspx');"><span>{{lbl_ListMember}}</span></a></li>
+          <li><a href="javascript:SwtichContent('/Member/ListMemberSetting.aspx');"><span>{{lbl_MemberSetting}}</span></a></li>
+          <li><a href="javascript:SwtichContent('/Member/DefaultMinMax.aspx');"><span>{{lbl_DefaultMinMax}}</span></a></li>
+      </ul>
+    </div>
+   <h3 id="hBankMgr">{{lbl_Bank}}</h3>
+    <div class="SiteNav" id="divBankMgr" >
+      <ul>
+        <li><a  href="javascript:SwtichContent('/Bank/CreateBank.aspx');"><span>{{lbl_CreateBank}}</span></a></li>
+          <li><a href="javascript:SwtichContent('/Bank/ListBank.aspx');"><span>{{lbl_ListBank}}</span></a></li>
+      </ul>
+    </div>
+         <h3 id="h1">{{lbl_TotalBets}}</h3>
+    <div class="SiteNav" id="div1" >
+      <ul>
+        <li><a  href="javascript:SwitchTotalBets('1','{{lbl_SlotGame}}');"><span>{{lbl_SlotGame}}</span></a></li>
+        <li><a  href="javascript:SwitchTotalBets('2','{{lbl_LiveCasino}}');"><span>{{lbl_LiveCasino}}</span></a></li>
+        <li><a  href="javascript:SwitchTotalBets('3','{{lbl_Keno}}');"><span>{{lbl_Keno}}</span></a></li>
+          
+      </ul>
+    </div>
+     <h3 id="hReportMgr">{{lbl_Reports}}</h3>
+    <div class="SiteNav" id="divReportMgr" >
+      <ul>
+        <li><a  href="javascript:SwtichContent('/Report/Outstanding.aspx');"><span>{{lbl_Outstanding}}</span></a></li>
+        <li><a  href="javascript:SwtichContent('');"><span>{{lbl_WinLoss}}</span></a></li>
+        <li><a  href="javascript:SwtichContent('/Report/Audit.aspx');"><span>{{lbl_Audit}}</span></a></li>
+        <li><a  href="javascript:SwtichContent('');"><span>{{lbl_PaymentFee}}</span></a></li>
+      
+      </ul>
+    </div>
+         <h3 id="h2">{{lbl_Setting}}</h3>
+    <div class="SiteNav" id="div2" >
+      <ul>
+        <li><a  href="javascript:SwtichContent('/Setting/PaymentSetting.aspx');"><span>{{lbl_PaymentSetting}}</span></a></li>
+        <li><a  href="javascript:SwtichContent('');"><span>{{lbl_GameSetting}}</span></a></li>
+
+          
+      </ul>
+    </div>
+</div>
+        <script>
+
+
+            if (!UserMgr) {
+                $("#hUserMgr").remove();
+                $("#divUserMgr").remove();
+            }
+            if (!MemberMgr)
+            {
+                $("#hMemberMgr").remove();
+                $("#divMemberMgr").remove();
+            }
+            if (!BankMgr) {
+                $("#hBankMgr").remove();
+                $("#divBankMgr").remove();
+
+            }
+            if (!ReportMgr) {
+                $("#hReportMgr").remove();
+                $("#divReportMgr").remove();
+
+            }
+        </script>
+</body>
+</html>
+

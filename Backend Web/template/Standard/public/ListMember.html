@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{{lbl_SubAccount}}</title>
+<link href="{{SkinPublicPath}}css/table_w.css" rel="stylesheet" type="text/css" />
+<link href="{{SkinPublicPath}}css/jquery.fixhead.css" rel="stylesheet" type="text/css" />    
+<link href="{{SkinPublicPath}}css/bootstrap.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="../Script/Users.js?v=20120301"></script>
+<script language="JavaScript" type="text/javascript" src="../Script/Member.js?v=20161228"></script>
+<script language="JavaScript" type="text/javascript" src="../Script/jquery/jquery.fixhead.js?v=20120201"></script>
+
+</head>
+<body>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="10"><img src="{{SkinPublicPath}}images/icon_title.gif" /></td>
+    <td><h1>{{lbl_ListMember}}</h1></td>
+  </tr>
+</table>
+<div class="boxgy">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabstyle01">
+    <tr>
+      <th width="14%">{{lbl_UserName}}</th>
+      <td width="17%"><input id="txtUserName" type="text" value="{{inputUserName}}" /></td>
+      <th width="15%"> {{lbl_Status}}</th>
+      <td><select name="selSearchUserStatus" id="selSearchUserStatus" >
+          <option value="0" {{selectedStatus0}}>{{lbl_All}}</option>
+          <option value="1" {{selectedStatus1}}>{{lbl_Open}}</option>
+          <option value="2" {{selectedStatus2}}>{{lbl_Suspend}}</option>
+          <option value="3" {{selectedStatus3}}>{{lbl_Closed}}</option>
+          <option value="4" {{selectedStatus4}}>{{lbl_Disabled}}</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <div id="Button" class="btnarea">
+    <div class="btnstyle" style="text-align:center;">
+      <a id="btnGetSubAccSearch" name="btnSubmit" onclick ="DoUserSearch('{{CurrentAgentName}}','{{CurrentAgentID}}','{{CurrentRoleID}}',2);" class="btngy"><span>{{lbl_Submit}}</span></a>
+    </div>
+  </div>
+</div>
+
+
+<div>
+  <table  cellpadding="0" cellspacing="0" class="tabstyle02" id="tbSubAccountInfo">
+    <thead>
+      <tr>
+      <th width="26">*</th>
+      <th width="27" nowrap="nowrap">{{lbl_Edit}}</th>
+      <th nowrap="nowrap" width="50">{{lbl_Status}}</th>
+      <th width="100" nowrap="nowrap">{{lbl_UserName}}</th>
+      <th width="100" nowrap="nowrap">{{lbl_FName}}</th>
+      <th width="100" nowrap="nowrap" style="TABLE-LAYOUT:fixed;word-break:break-all">{{lbl_LName}}</th>
+      <th width="100" nowrap="nowrap" style="TABLE-LAYOUT:fixed;word-break:break-all">{{lbl_Birthday}}</th>
+      <th width="100" nowrap="nowrap" style="TABLE-LAYOUT:fixed;word-break:break-all">{{lbl_Phone}}</th>
+      <th width="110" nowrap="nowrap" style="TABLE-LAYOUT:fixed;word-break:break-all">{{lbl_EMail}}</th>
+      <th width="110" nowrap="nowrap" style="TABLE-LAYOUT:fixed;word-break:break-all">{{lbl_Address}}</th>
+          
+      <th width="28" nowrap="nowrap">{{lbl_PWD}}</th>
+    
+    </thead>
+    <tbody>
+    {{SubAccDataOutput}}
+    </tbody>
+    <!-- BEGIN  SubAccListBlock -->
+    <tr class="{{IntervalColor}}">
+      <td width="26" align="center"> {{Number}} </td>
+      <td width="27" align="center"><a href="javascript:" onclick="OpenSubEdit('{{OpenEditUrl}}','{{CurrentAgentID}}','{{ToCID}}');"><img src="{{SkinPublicPath}}images/layout/icon_edit.png"/></a></td>
+      <td width="50" align="center"> <a href="javascript:" onclick="OpenChangeSubStatus('{{Status}}','{{ToCID}}','{{UserName}}','{{CurrentAgentID}}','{{CurrentRoleID}}',2);" > {{Status}}</a></td>
+      <td width="100" align="left"><div>{{SubUserName}}</div></td>
+      <td width="100" align="left"> {{FName}} </td>
+      <td width="100" align="left"> {{LName}} </td>
+      <td width="100" align="left"> {{Birthday}} </td>
+      <td width="100" align="left">{{Phone}}</td>
+      <td width="110" align="right">{{email}} </td>
+      <td width="110" align="right">{{Address}} </td>
+      <td width="28" align="center"><a href="javascript:" onclick="OpenChangeSubPWD('{{ToCID}}','{{UserName}}','{{CurrentAgentID}}','{{CurrentRoleID}}',2);"><img src="{{SkinPublicPath}}images/layout/key-pencil.png"/></a></td>
+    </tr>
+    <!-- END SubAccListBlock -->
+
+  </table>
+   
+    <!--DoPaging({CurrentAgentName:'company',CurrentAgentID:6918376,CurrentRoleID:99,PageLength:20,PageIndex:1})-->
+    <div class="div_wrapper">
+                <div class="div_center">
+                    <!--<select name="select_pageLength" onchange="DoPaging(this.options[this.selectedIndex].value ,'{{pageIndex}}','{{CurrentAgentName}}','{{CurrentAgentID}}','{{CurrentRoleID}}');">-->
+                    <select name="select_pageLength" onchange="DoPagingMemberList({ CurrentAgentName: '{{CurrentAgentName}}', CurrentAgentID: '{{CurrentAgentID}}', CurrentRoleID: '{{CurrentRoleID}}', PageLength: this.options[this.selectedIndex].value, PageIndex: '{{pageIndex}}' });">
+                        <option value="10" {{selected10}}={{selected10}}>{{lbl_PageLength10}}</option>
+                        <option value="20" {{selected20}}={{selected20}}>{{lbl_PageLength20}}</option>
+                        <option value="50" {{selected50}}={{selected50}}>{{lbl_PageLength50}}</option>
+                    </select>
+                </div>
+                <div class="div_center">　{{rowscount}}　</div>
+                <div class="div_center2">
+                    <ul class="pagination">
+                        {{pagination}}
+                    </ul>
+                </div>
+    </div>
+</div>
+<div id="divPopup" class="popup2" style="display:none"><span class="spop_button b-close"><span>X</span></span>
+  <div class="content" style="height: auto; width: auto;">
+    <div class="b-ajax-wrapper" style=""></div>
+  </div>
+</div>
+</body>
+<script>
+    $(function () {
+        var table = new TableThing('tbSubAccountInfo');
+        table.fixThead();
+        $(window).resize(function () {
+            table.fixThead();
+        });
+    });
+</script>
+</html>

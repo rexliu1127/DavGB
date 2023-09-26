@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<!-- Template by quackit.com -->
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>2 Rows Frames Layout (header frame)</title>
+<link href="{{SkinRootPath}}public/css/table_w.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" media="all" href="Script/jscalendar/calendar-blue.css" title="win2k-cold-1" />
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 100%;
+	max-height: 100%;
+	font-family:Sans-serif;
+	line-height: 1em;
+}
+
+</style>
+
+    <script type="text/javascript" src="Script/jscalendar/calendar.js"></script>
+<script type="text/javascript" src="Script/jscalendar/lang/calendar-en.js"></script>
+<script type="text/javascript" src="Script/jscalendar/calendar-setup.js"></script>
+    <script type="text/javascript" src="Script/Common.js"></script>
+    <script type="text/javascript">
+        var lbl_EnterValidAmount = '{{lbl_EnterValidAmount}}';
+        var lbl_enterbankname = '{{lbl_enterbankname}}';
+        var lbl_enteryourbankaccountname = '{{lbl_enteryourbankaccountname}}';
+        var lbl_enteryourbankaccountNo = '{{lbl_enteryourbankaccountNo}}';
+        var lbl_Confirmsubmitthisrequest = '{{lbl_Confirmsubmitthisrequest}}';
+        var lbl_enterbankbranchname = '{{lbl_enterbankbranchname}}';
+        function DoWithdrawTransaction() {
+
+            if (document.getElementById('txtAmountIn').value == '') {
+                alert(lbl_EnterValidAmount);
+                return;
+            }
+
+
+            if (document.getElementById('txtBankName').value == '') {
+                alert(lbl_enterbankname);
+                return;
+            }
+            if (document.getElementById('txtBranchName').value == '') {
+                alert(lbl_enterbankbranchname);
+                return;
+            }
+            if (document.getElementById('txtBankAccountName').value == '') {
+                alert(lbl_enteryourbankaccountname);
+                return;
+            }
+            if (document.getElementById('txtBankAccountNo').value == '') {
+                alert(lbl_enteryourbankaccountNo);
+                return;
+            }
+            var result = confirm(lbl_Confirmsubmitthisrequest);
+            if (result) {
+                document.getElementById('frmWithdrawDoQuickQuickTransfer').submit();
+            }
+
+        }
+    </script>
+		</head>
+
+		<body>
+<header id="dep_header">
+          <div id="dep_logo">
+    <table width="100%" border="0">
+              <tr>
+        <td ><h1>{{lbl_WithdrawalFromLocal}}</h1></td>
+
+      </tr>
+            </table>
+  </div>
+</header>
+<main>
+    <form id="frmWithdrawDoQuickQuickTransfer" name="frmWithdrawDoQuickQuickTransfer" action="DoWithdrawQuickQuickTransfer.aspx" method="post">
+          <div class="innertube1">
+    <font>{{lbl_WQuickTransferNoteBody}}</font> </div>
+          <div class="innertube2">
+    <h1>{{lbl_QuickTransfer}}</h1>
+    <table width="100%" border="0" cellpadding="3">
+              <tr>
+        <th><font>{{lbl_AmountIn}}RMB</font> <font style="color:red;"> * </font> </th>
+        <td><font>
+          <input name="txtAmountIn" id="txtAmountIn" onkeydown="return(validateOnKP(this, event,this.selectionStart));" type="text">
+          </font></td>
+</tr>
+           
+
+
+              <tr>
+        <th><font>{{lbl_BankName}}</font><font style="color:red;"> * </font></th>
+        <td><font>
+          <input name="txtBankName" id="txtBankName" type="text" value="{{YourBankName}}">
+          </font></td>
+      </tr>
+                      <tr>
+        <th><font>{{lbl_BranchName}}</font><font style="color:red;"> * </font></th>
+        <td><font>
+          <input name="txtBranchName" id="txtBranchName" type="text" value="{{BranchName}}">
+          </font></td>
+      </tr>
+              <tr>
+        <th><font>{{lbl_WBankAccountName}}</font><font style="color:red;">*</font></th>
+        <td><font>
+          <input name="txtBankAccountName" id="txtBankAccountName" type="text" value="{{BankAccountName}}">
+          </font></td>
+      </tr>
+              <tr>
+        <th><font>{{lbl_WBankAccountNo}}</font><font style="color:red;"> * </font></th>
+        <td><font>
+          <input name="txtBankAccountNo" id="txtBankAccountNo" type="text" value="{{BankAccountNo}}">
+          </font></td>
+      </tr>
+              <tr>
+        <th>&nbsp;</th>
+        <td><a href="javascript:DoWithdrawTransaction();" class="myButton">{{lbl_submit}}</a></td>
+      </tr>
+            </table>
+  </div>
+        </form>
+        </main>
+</body>
+</html>

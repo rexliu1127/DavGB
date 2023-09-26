@@ -1,0 +1,90 @@
+body {margin: 0px 5px 0px 0px; padding:0px;	background-color: #FFFFFF; font-family: Arial, Helvetica, sans-serif;}
+
+table { border-collapse:collapse;}
+table td { padding:0px;}
+
+a {text-decoration: none;}
+
+.right{float: right;}
+.left{float: left;}
+.mgdon2 { margin-bottom: 2px;}
+
+/*RightEVEN*/
+
+.r-box{
+	float:left;
+	border: 1px solid #cccccc;
+	display: block;
+	width:228px;
+	margin-bottom:5px;
+}
+.rtitle{
+	background-image: url(../images/layout/EURO/EUR_Rtitlebg.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	display: block;
+	height: 17px;
+	padding: 3px 3px 3px 10px;
+}
+.rballteam{
+	font-size: 11px;
+	line-height: 14px;
+	font-weight: bold;
+	color: #494949;
+	background-color: #e8e8e8;
+	display: block;
+	padding: 2px 0px 0px 0px;
+	float:left;
+	width:100%;
+}
+
+.rline{
+	background-image: url(../images/layout/EURO/EUR_Rline.gif);
+	background-repeat: no-repeat;
+	background-position: 0px -2px;
+	display: block;
+	height: 4px;
+	width:218px;
+	float:left;
+	margin: 0px 5px 0px 5px;
+}
+
+.evenbox{
+	width:218px;
+	display: block;
+	float:left;
+	padding: 5px;
+}
+.evencont{width:150px; float:left;}
+.evencont h1{
+	font-size: 13px;
+	font-weight: bold;
+	color: #D30000;
+	display: block;
+	margin: 0px 0px 2px 0px;
+	line-height: 15px;
+}
+.evencont h2{
+	font-size: 11px;
+	color: #5a5959;
+	display: block;
+	margin: 0px;
+	line-height: 14px;
+	font-weight: lighter;
+}
+.pto {width:68px; float:left;}
+
+.servicebox {margin-bottom:3px; padding-right:5px; width:98%; display:block; float:left;}
+.service {font-size: 11px; font-weight: bold;	color: #646464;	display:block; padding-top:5px;}
+.service a{font-size: 11px; font-weight: bold;	color: #646464;}
+
+
+
+
+
+
+

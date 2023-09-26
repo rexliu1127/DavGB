@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+.icon_bgcolor{
+	background-color: #00deff;
+	/*display: inline-block;*/
+	margin: 1px;
+	height: 12px;
+	width: 12px;cursor:pointer;
+	}
+/*.icon_more a, .icon_info a, .icon_favo a, .icon_smap a{cursor:pointer;}	
+
+.icon_more{background-position: 0px -12px;}
+.icon_info{background-position: 0px -48px;}	
+.icon_favo{background-position: 0px -60px;}	
+.icon_smap{background-position: 0px -24px;}	
+.icon_tv{background-position: 12px -36px;}
+
+.unicon_smap{background-position: 0px -24px;}	
+.unicon_tv{background-position: 12px -36px;}*/

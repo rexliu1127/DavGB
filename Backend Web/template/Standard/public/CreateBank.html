@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="{{SkinPublicPath}}css/table_w.css" rel="stylesheet" type="text/css" />
+    <script language="JavaScript" type="text/javascript" src="Script/Bank.js?v=20140506"></script>
+
+    <script>
+        var enterBankName = '{{lbl_PleaseInput}}' + '{{lbl_BankName}}'
+        var enterBankAccount = '{{lbl_PleaseInput}}' + '{{lbl_BankAccount}}'
+    </script>
+</head>
+<body>
+    <form action="Bank/InsBank.aspx" method="post" id="frmCreateBank" name="frmCreateBank" target="ifmInsUdp">
+  <div id="Bank">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="10"><img src="{{SkinPublicPath}}images/icon_title.gif" /></td>
+        <td><h1>{{lbl_CreateBank}}</h1></td>
+      </tr>
+    </table>
+    <div>
+      <table width= "100%" cellpadding="0" cellspacing="0" class="tabstyle02">
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_BankCode}}</th>
+          <td width="40%">
+            <input type="text" id="txtBankCode" name="txtBankCode" />
+          </td>
+          <th width="10%" nowrap="nowrap">{{lbl_BankName}} * </th>
+          <td width="40%"><input type="text" name= "txtBankName" id="txtBankName" />
+          </td>
+        </tr>
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_BankAccount}} * </th>
+          <td width="40%"><input type="text" id="txtBankAccount" name="txtBankAccount" /></td>
+        
+        </tr>
+
+
+      </table>
+    </div>
+  </div>
+
+
+  <br />
+  <div id="Button" class="btnarea">   
+      <a id="btnSubmit" name="btnSubmit" onclick ="DoInsBank();" class="btngy"><span>{{lbl_submit}}</span></a>        
+  </div>
+    
+
+</form>
+<iframe name="ifmInsUdp" id="ifmInsUdp" src="" style="display: none"></iframe>
+
+
+</body>
+</html>

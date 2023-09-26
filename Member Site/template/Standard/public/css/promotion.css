@@ -1,0 +1,233 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-image: url(../images/layout/bodybg.gif);
+	background-repeat: repeat-y;
+	background-position: left;
+	background-color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left: 15px;
+}
+a, a:link {
+	font-size: 11px;
+	line-height: 18px;
+	font-weight: bold;
+	color: #000459;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+	color: #fe0000;
+}
+.bodycontent {
+	width:757px;
+	padding-right: 5px;
+	padding-left:  5px;
+	margin-right: auto;
+	margin-left: auto;
+}
+/* ifram */
+form {
+	padding: 0px;
+	margin: 0px;
+}
+.contmain {
+	width: 757px;
+	background-color: #FFFFFF;
+}
+.bonudetail {
+	background-color:#5a0105;
+	color: #FFFFFF;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	text-decoration: none;
+}
+.titicon {
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom : 1px dotted #FFFFFF;
+	background-image: url(../images/promo/icon.jpg);
+	background-repeat: no-repeat;
+	padding-left: 35px;
+	height: 31px;
+	padding-bottom: 5px;
+	display:block;
+	position : relative;
+	line-height:35px;
+}
+.Box {
+	font-size: 12px;
+	color: #333333;
+	border-top : 1px solid #ff8585;
+	border-bottom : 1px solid #ff8585;
+	border-left : 1px solid #ff8585;
+	border-right : 1px solid #ff8585;
+	margin-right: 15px;
+}
+.Boxword {
+	font-size: 12px;
+	font-weight: none;
+	color: #FFFFFF;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+.buinvite a {
+	font-size: 12px;
+	background-image: url(../images/promo/bun.jpg);
+	text-align: center;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	height: 23px;
+	width: 97px;
+	color: #FFFFFF;
+	display:block;
+	float: right;
+	margin-top: 15px;
+}
+.buinvite a:hover {
+	color: #FFCC00;
+	text-decoration: none;
+}
+.contmain h3 {
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: bold;
+	color: #223f71;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	padding-left: 10px;
+}
+.contmain h5 {
+	font-size: 11px;
+	line-height: 16px;
+	color: #2f2f2f;
+	margin-bottom: 6px;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-left: 10px;
+	padding-right: 8px;
+}
+.contmain h5 em {
+	font-weight: bold;
+	color: #fe0000;
+	font-style: normal;
+}
+.contmain h5 ol {
+	margin-top: 0px;
+	margin-left: -20px;
+	_margin-left: 20px;
+ *margin-left: 20px;
+}
+.contmain h5 ol li {
+	margin-left: 0px;
+	_margin-left: 5px;
+ *margin-left: 5px;
+	margin-bottom: 5px;
+}
+.TabStyle01 {
+	font-size: 12px;
+	line-height: 16px;
+	color: #000000;
+	margin-bottom: 6px;
+	font-weight: normal;
+	border-top : 1px solid #fff;
+	border-left : 1px solid #fff;
+	text-indent: 5px;
+}
+.TabStyle02 {
+	font-size: 12px;
+	line-height: 16px;
+	color: #525252;
+	margin-bottom: 6px;
+	font-weight: bold;
+	border-top : 1px solid #bebebe;
+	border-left : 1px solid #bebebe;
+	text-indent: 5px;
+}
+.TabStyle03 {
+	font-size: 12px;
+	line-height: 16px;
+	color: #FFFFFF;
+	margin-bottom: 6px;
+	font-weight: bold;
+	border-top : 1px solid #bebebe;
+	border-left : 1px solid #bebebe;
+	text-indent: 5px;
+}
+.TabStyle01 td {
+	border-bottom : 1px solid #fff;
+	border-right : 1px solid #fff;
+	padding:3px;
+}
+.TabStyle01 th {
+	padding:3px;
+	background-color: #9f0915;
+	color: #ffffff;
+	border-bottom : 1px solid #fff;
+	border-right : 1px solid #fff;
+}
+.TabStyle02 td {
+	border-bottom : 1px solid #bdbdbd;
+	border-right : 1px solid #bdbdbd;
+	padding:3px;
+}
+.TabStyle02 th {
+	padding:3px;
+	background-color: #e2e2e2;
+	color: #525252;
+	border-bottom : 1px solid #bebebe;
+	border-right : 1px solid #bebebe;
+}
+.TabStyle03 td {
+	border-bottom : 1px solid #bdbdbd;
+	border-right : 1px solid #bdbdbd;
+	padding:3px;
+}
+.TabStyle03 th {
+	padding:3px;
+	background-color: #9f0915;
+	color: #FFFFFF;
+	border-bottom : 1px solid #bebebe;
+	border-right : 1px solid #bebebe;
+}
+.bggylight {
+	background-color: #f3f2f2;
+}
+.bggy {
+	background-color: #e2e2e2;
+}
+.red {
+	color: #ff0100;
+}
+.page {
+	padding-left: 10px;
+}
+.page-tit {
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #313131;
+	background-color: #eeeeee;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.page-main {
+	font-size: 11px;
+	line-height: 16px;
+	color: #535353;
+	background-color: #ffffff;
+	border-bottom : 6px solid #eeeeee;
+	border-left : 6px solid #eeeeee;
+	border-right : 6px solid #eeeeee;
+	padding-top: 6px;
+	padding-right: 6px;
+	padding-bottom: 6px;
+	padding-left: 3px;
+}

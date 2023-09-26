@@ -1,0 +1,94 @@
+﻿body {
+	margin: 0;
+	padding: 0;
+}
+.SportsMenu {
+	margin: 0;
+	list-style: none;
+}
+ul {
+	padding:0;
+	margin:0;
+}
+#leftHead, #leftBody{margin-top:10px;}
+.bod, .modebod{
+	height: 28px;
+	padding: 1px 0px 0px 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #E2E2E2;
+	border-left-color: #E2E2E2;
+	width:171px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #E2E2E2;
+	-moz-border-radius: 4px 4px 0px 0px;
+	border-radius: 4px 4px 0px 0px;
+}
+.modebod{height: 24px!important;}
+.SportsMenu li {
+	float: left;
+	background-color: #FFFFFF;
+	 /*border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #E2E2E2;   padding: 1px 0px 0px 1px;	-webkit-border-radius: 4px 4px 0px 0px;
+	-moz-border-radius: 4px 4px 0px 0px;
+	border-radius: 4px 4px 0px 0px;*/
+	}
+.SportsMenu li a {
+	display: block;
+	width: 56.5px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	padding-top: 6px;
+	-webkit-border-radius: 4px 4px 0px 0px;
+	-moz-border-radius: 4px 4px 0px 0px;
+	border-radius: 4px 4px 0 0;
+	behavior: url(ie-css3.htc); /* 使用ie-css3 */
+}
+.Bet_Mode > ul li a{width:85px!important;height: 18px!important;}
+.Bet_Mode_one > ul li a{width:170px!important;height: 18px!important;}
+.SportsMenu li a span {
+	font-size: 12px;
+	font-weight: bold;
+}
+.Bet_Mode .SportsMenu li a span, .Bet_Mode_one .SportsMenu li a span {
+	font-size: 11px!important;
+	font-weight: normal!important;
+}
+.home {
+	height: 22px;
+	-webkit-border-radius: 4px 4px 0px 0px;
+	-moz-border-radius: 4px 4px 0px 0px;
+	border-radius: 4px 4px 0px 0px;
+    behavior: url(ie-css3.htc); /* 使用ie-css3 */
+	display: inline-block;
+	background-color: #3b5998; /*for change*/
+	background-image: url(../images/layout/color/mask1.png); /*for change*/
+	background-repeat: repeat-x;
+	background-position: 0px 0px; 
+	}
+.home_Mask {
+	height: 22px;
+	color: #fff!important;
+	-webkit-border-radius: 4px 4px 0px 0px!important;
+	-moz-border-radius: 4px 4px 0px 0px!important;
+	border-radius: 4px 4px 0px 0px!important;
+	background-color: #000!important;
+	background: -moz-linear-gradient(top, #000 0%, #616161 100%)!important; /* FF3.6+ */
+	background: -webkit-linear-gradient(top, #000 0%, #616161 100%)!important; /* Chrome10+,Safari5.1+ */
+    background: -ms-linear-gradient(top, #000 0%, #616161 100%!important); /* IE10+ */
+	background: linear-gradient(top, #000 0%, #616161 100%)!important; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000', endColorstr='#616161', GradientType=0 )!important; /* IE6-8 */
+	margin-top:0px;
+}
+.bhr {
+	clear: both;
+	height: 1px;
+	z-index: 200;
+	background-color: #e2e2e2;
+	width: 173px;
+}

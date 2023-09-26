@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<link href="{{SkinPublicPath}}css/table_w.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="Script/Users.js?v=20140506"></script>
+<script language="javascript" type="text/javascript">
+    var bYear = '{{bYear}}';
+    var bMonth = '{{bMonth}}'
+    var defCountry = '{{Country}}'
+
+    $('#Selmon option[value=' + bMonth + ']').attr('selected', true);
+    $('#txtyear option[value=' + bYear + ']').attr('selected', true);
+        $('#selCountry option[value=' + defCountry + ']').attr('selected', true);
+    </script>
+</head>
+<body>
+<form action="User/UpdUser.aspx" method="post" id="frmEdieMember" name="frmEdieMember" >
+  <div id="CustomerInfo">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td id="CustomerInfoContentTitle" class="titleOpen"><a href="javascript:ShowHideEditDiv('CustomerInfoContent');">{{lbl_EditAccount}}</a></td>
+      </tr>
+    </table>
+    <div id="CustomerInfoContent">
+      <table width= "100%" cellpadding="0" cellspacing="0" class="tabstyle02">
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_UserName}} </th>
+          <td width="40%"> {{UserName}}</td>
+          <th width="10%" nowrap="nowrap">{{lbl_FirstName}}</th>
+          <td width="40%">
+                <input type="text" id="txtFirstname" name="txtFirstname" value="{{Firstname}}" />
+          </td>
+        </tr>
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_LastName}}</th>
+          <td width="40%"><input type="text" id="txtLastname" name="txtLastname" value="{{Lastname}}" /></td>
+                      <th width="10%" nowrap="nowrap">{{lbl_EMail}}</th>
+          <td width="40%"><input type="text" id="txtEMail" name="txtEMail" value="{{EMail}}" /></td>
+
+        </tr>
+        <tr>
+          <th width="10%" nowrap="nowrap">{{lbl_Gender}}</th>
+                      <td><input name="selGendar" id="selGendar" type="radio" class="noborder" value="0" {{MaleChecked}} />
+                        {{lbl_Male}}
+                        <input name="selGendar" id="selGendar" type="radio" class="noborder" value="1" {{FemaleChecked}} />
+                        {{lbl_Female}}</td>
+              <th width="10%" nowrap="nowrap">{{lbl_Birthday}}</th>
+              <td width ="40%">
+            <select name="Selmon" id="Selmon">
+                          <!-- BEGIN MONTH -->
+                          <option value ="{{MonthID}}" >{{MonthName}}</option>
+                          <!-- END MONTH -->
+                        </select>
+                        <input name="txtday" id="txtday" type="text" size="5" value="{{bDay}}" />
+                        ,
+                        <select name="txtyear" id="txtyear">
+                          <!-- BEGIN SELYEAR -->
+                          <option value="{{YearCode}}" >{{YearName}}</option>
+                          <!-- END SELYEAR -->
+                        </select>
+                  </td>
+
+        </tr>
+         <tr>
+                      <th width="10%" nowrap="nowrap">{{lbl_Country}}</th>
+            
+                       <td><select name="selCountry" id="selCountry">
+                          <!-- BEGIN SELCOUNTRY -->
+                          <option value="{{CountryCode}}" {{Selected}}>{{CountryName}}</option>
+                          <!-- END SELCOUNTRY -->
+                        </select></td>
+
+                        <th width="10%" nowrap="nowrap">{{lbl_address}}</th>
+                      <td><input name="txtaddress" id="txtaddress" type="text" size="30" value="{{address}}" /></td>
+         </tr>
+                     <tr>
+                      <th width="10%" nowrap="nowrap">{{lbl_Citytown}}</th>
+                      <td><input name="txtCitytown" id="txtCitytown" type="text" size="30" value="{{Citytown}}" /></td>
+                         <th width="10%" nowrap="nowrap">{{lbl_State}}</th>
+                      <td><input name="txtState" id="txtState" type="text" size="30" value="{{State}}" /></td>
+                    </tr>
+                        <tr>
+                       <th width="10%" nowrap="nowrap">{{lbl_Zipcode}}</th>
+
+                      <td><input name="txtZip_code" type="text" id="txtZip_code" size="30"  maxlength="10" value="{{Zipcode}}" /></td>
+
+                              <th width="10%" nowrap="nowrap">{{lbl_Primaryphone}}</th>
+                      <td><input name="txtPrimary_phone" id="txtPrimary_phone" type="text" size="30" value="{{mobile}}" /></td>
+                    </tr>
+      </table>
+    </div>
+  </div>
+
+  <br />
+  <div id="Button" class="btnarea">   
+      <a  onclick ="CloseBPopup();" class="btngy"><span>{{lbl_cancel}}</span></a>          
+      <a id="btnSubmit" name="btnSubmit" onclick ="DoEditMember();" class="btngy"><span>{{lbl_submit}}</span></a>  
+  </div>
+  <input type="hidden" id="RT" name="RT" value="upd" />
+  <input type="hidden" id="ToCID" name="ToCID" value="{{ToCID}}" />
+</form>
+
+
+<script>
+  
+  
+</script>
+
+</body>
+</html>
